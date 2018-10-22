@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>big data</title>
+	<atom:link href="https://www.clubcloudcomputing.com/category/big-data/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.clubcloudcomputing.com</link>
+	<description></description>
+	<lastBuildDate>Mon, 22 Oct 2018 15:15:59 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.8</generator>
+
+<image>
+	<url>https://www.clubcloudcomputing.com/wp-content/uploads/2017/02/cropped-favi-32x32.jpg</url>
+	<title>big data</title>
+	<link>https://www.clubcloudcomputing.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>The cloud of things</title>
+		<link>https://www.clubcloudcomputing.com/2014/02/cloud-things/</link>
+		<comments>https://www.clubcloudcomputing.com/2014/02/cloud-things/#comments</comments>
+		<pubDate>Wed, 12 Feb 2014 16:59:27 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[big data]]></category>
+		<category><![CDATA[PaaS]]></category>
+		<category><![CDATA[services]]></category>
+
+		<guid isPermaLink="false">https://www.clubcloudcomputing.com/?p=2188</guid>
+		<description><![CDATA[<p>Cloud computing also promises to be a great tool for the &#8216;Internet of Things&#8217;. Here is an example of how that is applied right now. The heating system in my house has a bit of a challenge: the thermostat does not seem to be working well under certain circumstances. So I built a small sensor [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2014/02/cloud-things/">The cloud of things</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Cloud computing also promises to be a great tool for the &#8216;Internet of Things&#8217;.</p>
+<p>Here is an example of how that is applied right now.</p>
+<p>The heating system in my house has a bit of a challenge: the thermostat does not seem to be working well under certain circumstances. So I built a small sensor device, consisting of a few temperature sensors that I strapped to both the incoming and the outgoing pipe of the main radiator. The sensors are read by a <a href="http://electricimp.com/" target="_blank">Electric Imp</a>, which is basically a WiFi enabled micro-controller.</p>
+<p>The Electric Imp is programmed through a cloud service on which I developed a simple temperature logging application. That application logs its data through an API on <a href="https://xively.com/" target="_blank">Xively</a>. Xively hosts the data, and provides some management and visualization features.</p>
+<p><a href="https://www.clubcloudcomputing.com/wp-content/uploads/2014/02/temp-sensor-delta-example.png"><img class="alignright size-medium wp-image-2189" src="https://www.clubcloudcomputing.com/wp-content/uploads/2014/02/temp-sensor-delta-example-300x158.png" alt="temp sensor delta example" width="300" height="158" srcset="https://www.clubcloudcomputing.com/wp-content/uploads/2014/02/temp-sensor-delta-example-300x158.png 300w, https://www.clubcloudcomputing.com/wp-content/uploads/2014/02/temp-sensor-delta-example.png 509w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>Here is an example of the graph. It displays the difference between the two pipe temperatures, which is a measure for the amount of heat transferred into the room. Notice the high peaks in the morning when we have set the thermostat to heat up the room, after which it goes into a more or less stationary pattern.</p>
+<p>One of the features is notification through a Web API. I set notifications for the situation where the data stops coming, or when we are experiencing sub-zero temperatures. In these cases, there is probably something wrong with the sensor hardware or software. Xively basically throws a webhook with data. This webhook is caught by another service: <a href="https://zapier.com/" target="_blank">Zapier</a>.</p>
+<p>Zapier is like a message queue programmable through an API. I let it send emails as a respons to events.</p>
+<p>The final component is more customizable presentation. As a matter of fact, that can be done directly from a webpage with javascript, but I have the webpage hosted at <a href="https://github.com/pve/channel-viz" target="_blank">github</a>. This page allows me to monitor the room temperature and other data from anywhere in the world on my smartphone. All in all I spend a few hours and the equivalent of around 50 dollars on this. Google spent 3 billion on Nest.</p>
+<p>Wrapping it up, I took a bunch of cloud services, hooked them up together, and I have a live system. All the cloud services promise to scale very well. And maybe in a next post I will elaborate on the <a title="Course content Certificate of Cloud Security Knowledge (CCSK)" href="https://www.clubcloudcomputing.com/ccsk-course-content/">Cloud Security </a>features that these services have, or should have.</p>
+<p>And I can now show on which days the heating starts and stops way too early. Time for the repairman.</p>
+<p>&nbsp;</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2014/02/cloud-things/">The cloud of things</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.clubcloudcomputing.com/2014/02/cloud-things/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>If only your own data warehouse was this secure</title>
+		<link>https://www.clubcloudcomputing.com/2013/05/if-only-your-own-data-warehouse-was-this-secure/</link>
+		<comments>https://www.clubcloudcomputing.com/2013/05/if-only-your-own-data-warehouse-was-this-secure/#respond</comments>
+		<pubDate>Tue, 28 May 2013 13:38:02 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[big data]]></category>
+		<category><![CDATA[clouds]]></category>
+
+		<guid isPermaLink="false">https://www.clubcloudcomputing.com/?p=955</guid>
+		<description><![CDATA[<p>Dr. Werner Vogels, CTO of Amazon (not just Amazon Web Services), unveils some interesting information on RedShift, Amazon&#8217;s service for data-warehouses on demand. Its petabyte performance envelop and on-demand pricing are awesome enough, but here I would like to point out some of the security features of the service. These ranges from physical controls to [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2013/05/if-only-your-own-data-warehouse-was-this-secure/">If only your own data warehouse was this secure</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Dr. Werner Vogels, CTO of Amazon (not just Amazon Web Services), unveils some <a title="Redshift" href="http://www.allthingsdistributed.com/2013/05/amazon-redshift-designing-for-security.html">interesting information on RedShift</a>, Amazon&#8217;s service for data-warehouses on demand. Its petabyte performance envelop and on-demand pricing are awesome enough, but here I would like to point out some of the security features of the service.</p>
+<p>These ranges from physical controls to staff monitoring to multiple firewalls to hardware encryption. The blog post contains quite a bit more information. The controls are also audited. Unfortunately, these lists are not publicly available, though I have seen similar extensive statements from other providers.</p>
+<p>If you think you can do better, you should consider starting your own cloud provider!</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2013/05/if-only-your-own-data-warehouse-was-this-secure/">If only your own data warehouse was this secure</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.clubcloudcomputing.com/2013/05/if-only-your-own-data-warehouse-was-this-secure/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>

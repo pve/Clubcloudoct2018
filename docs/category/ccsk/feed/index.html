@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>CCSK</title>
+	<atom:link href="https://www.clubcloudcomputing.com/category/ccsk/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.clubcloudcomputing.com</link>
+	<description></description>
+	<lastBuildDate>Mon, 22 Oct 2018 15:15:59 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.8</generator>
+
+<image>
+	<url>https://www.clubcloudcomputing.com/wp-content/uploads/2017/02/cropped-favi-32x32.jpg</url>
+	<title>CCSK</title>
+	<link>https://www.clubcloudcomputing.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>First CCSP delivery, and some thoughts on oldskool and newskool IT thinking</title>
+		<link>https://www.clubcloudcomputing.com/2016/03/first-ccsp-delivery-and-some-thoughts-on-oldskool-and-newskool-it-thinking/</link>
+		<pubDate>Fri, 11 Mar 2016 13:54:11 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[CCSK]]></category>
+		<category><![CDATA[CCSP]]></category>
+
+		<guid isPermaLink="false">https://www.clubcloudcomputing.com/?p=3713</guid>
+		<description><![CDATA[<p>A few weeks ago I ran my first CCSP training session (I did more than 40 CCSK sessions before this). As of this writing, the attendants still have to do the exam. Apparently the exam slots are booked a few weeks in advance. This was an in-company training with a pretty advanced group: info security [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2016/03/first-ccsp-delivery-and-some-thoughts-on-oldskool-and-newskool-it-thinking/">First CCSP delivery, and some thoughts on oldskool and newskool IT thinking</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>A few weeks ago I ran my first CCSP training session (I did more than 40 CCSK sessions before this). As of this writing, the attendants still have to do the exam. Apparently the exam slots are booked a few weeks in advance.</p>
+<p>This was an in-company training with a pretty advanced group: info security consultants and a few of their clients, all of whom had experience in being a cloud consumer as well as having been involved on the cloud provider side. Half the group had already done CCSK.</p>
+<p>The location was equally inspiring. Central London, with a great barista around the corner, which we therefore frequented multiple times a day for the entire week.<a href="https://www.clubcloudcomputing.com/wp-content/uploads/2016/03/2016-02-15-10.22.24.jpg"><img class="alignright size-medium wp-image-3714" src="https://www.clubcloudcomputing.com/wp-content/uploads/2016/03/2016-02-15-10.22.24-300x169.jpg" alt="Barista" width="300" height="169" srcset="https://www.clubcloudcomputing.com/wp-content/uploads/2016/03/2016-02-15-10.22.24-300x169.jpg 300w, https://www.clubcloudcomputing.com/wp-content/uploads/2016/03/2016-02-15-10.22.24-600x337.jpg 600w, https://www.clubcloudcomputing.com/wp-content/uploads/2016/03/2016-02-15-10.22.24-1024x575.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>The good news on cloud security is: it is interesting, dynamic, relevant and worthwhile stuff.</p>
+<p>The bad news is: it is more complicated than you think.</p>
+<p>The CCSP body of knowledge is significantly more elaborate than the CCSK one. And while the book is pretty reasonable, it does have its limitations.</p>
+<p>We mused quite a bit about the adoption of cloud computing. Like any disruptive innovation, cloud computing is going to take 10-15 years to grow from zero to saturation. According to my guess, we are in year 3 or 4 of enterprise adoption, with 2021 or so as the target date for near complete adoption.</p>
+<p>What we saw in the discussions was a lot of talk on ‘oldskool’ thinking versus ‘newskool’ thinking. Cloud brings a new thinking model, and in cloud security we see the biggest failures when oldskool controls are applied to newskool architectures.</p>
+<p><a href="https://www.clubcloudcomputing.com/wp-content/uploads/2016/03/LMS-1-2-oldskoop-newskool.png"><img class="alignleft size-medium wp-image-3715" src="https://www.clubcloudcomputing.com/wp-content/uploads/2016/03/LMS-1-2-oldskoop-newskool-300x225.png" alt="LMS 1-2 oldskoop newskool" width="300" height="225" srcset="https://www.clubcloudcomputing.com/wp-content/uploads/2016/03/LMS-1-2-oldskoop-newskool-300x225.png 300w, https://www.clubcloudcomputing.com/wp-content/uploads/2016/03/LMS-1-2-oldskoop-newskool-600x450.png 600w, https://www.clubcloudcomputing.com/wp-content/uploads/2016/03/LMS-1-2-oldskoop-newskool.png 960w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>Examples: location no longer implies control, and the uptime of a server no longer implies the uptime of the application.</p>
+<p>It was really interesting to tear apart these assumptions and see which will carry over to the new world. The dangers of mixing these modes of thinking can go many ways: you either protect too much, the wrong way, or not at all.</p>
+<p>The consequence of this is that in our training we really want to pay attention to the hidden assumptions of these two schools of thinking.</p>
+<p>The CCSP body of knowledge itself is a product of its times: it is a peculiar mix of oldskool and newskool thinking, and mostly not very explicit about that. It also does not elaborate much on how ‘newskool’ thinking should be applied to create business benefits while avoiding the new risks.</p>
+<p>But we should not confuse the messenger for the news. The text is just the messenger, cloud is the real news.</p>
+<p>I am looking forward to the next CCSP training session. What about letting me be your guide for one in your company? Drop me a line.</p>
+<p>[contact-form-7 id=&#8221;1113&#8243; title=&#8221;Contact form 1 EN&#8221;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2016/03/first-ccsp-delivery-and-some-thoughts-on-oldskool-and-newskool-it-thinking/">First CCSP delivery, and some thoughts on oldskool and newskool IT thinking</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Just did the CCSP exam</title>
+		<link>https://www.clubcloudcomputing.com/2015/07/just-did-the-ccsp-exam/</link>
+		<pubDate>Fri, 24 Jul 2015 15:33:43 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[CCSK]]></category>
+		<category><![CDATA[CCSP]]></category>
+		<category><![CDATA[education]]></category>
+		<category><![CDATA[security]]></category>
+
+		<guid isPermaLink="false">https://www.clubcloudcomputing.com/?p=3292</guid>
+		<description><![CDATA[<p>(update: I passed!) Yesterday I took the CCSP exam. Certified Cloud Security Professional is the new certification launched by ISC2, and is supposed to be complementary to CCSK. I must have been one of the first, as it only opened last Tuesday. I think I did pretty well, but my results won’t be available for the [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2015/07/just-did-the-ccsp-exam/">Just did the CCSP exam</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>(update: I passed!)</p>
+<p>Yesterday I took the <a href="https://www.clubcloudcomputing.com/ccsp/">CCSP</a> exam. Certified Cloud Security Professional is the new certification launched by ISC2, and is supposed to be <a href="https://www.clubcloudcomputing.com/ccsp-ccsk-cloud-security-certifications/">complementary to CCSK</a>. I must have been one of the first, as it only opened last Tuesday. I think I did pretty well, but my results won’t be available for the next couple of weeks. This appears to be the normal situation with a new exam.</p>
+<h2>Impressions</h2>
+<p>My overall impression is that the exam covers the field of cloud computing and cloud security pretty broadly with significant detail. Nevertheless, CCSP gives little attention to cloud applications such as Big Data and DevOps. The questions are clear, by and large, and mostly relevant to cloud computing. I have seen other so-called cloud exams that are more like classical technical IT security exams.</p>
+<p>Having said that, the CCSP exam still requires significant understanding of IT infrastructure and IT security.</p>
+<p>I know how hard it is to make good questions, as I do that for the CCSK trainings I deliver, and this set of questions is pretty decent. Of course, there are some questions that have weird language, and I filed an incident report against them.</p>
+<p>At 125 questions this is a significant exam. I took more than an hour to answer them all, and took the rest of two hours reviewing my answers. You have 4 hours in total.</p>
+<p>I still think CCSK is a good basis for working your way to CCSP, as CCSP is more extensive in coverage. It is also a more formal exam that you have to take in a controlled testing center. In contrast, CCSK is an open-book on-line exam. This does not make it easier though, as is witnessed by that fact that it is failed regularly by students.</p>
+<h2>Content</h2>
+<p>CCSP has 6 domains that cover cloud computing and its risks. Unsurprisingly, the first domain is about cloud architectural concepts and its impact on risk. Second is about data security, arguably the pivotal dimension in cloud computing. The third domain elaborates on the cloud infrastructure stack, which covers business continuity as well. The fourth domain covers application security and identity management, while the fifth domain is about operations in a cloud world. Finally, the last domain is about legal and compliance.</p>
+<p>By design, CCSP is a 5 day course, but I currently think that this is very dependent on the background of the attendants. I am not sure if this format is a good way to study for CCSP. In any case students need to do a lot of reading.</p>
+<p><strong>Post Scriptum</strong>. I now also <a href="https://www.clubcloudcomputing.com/ccsp-private-training/">deliver CCSP courses that train you for the exam</a>. Here is what one of my clients wrote:</p>
+<blockquote><p><strong>Tony Richards, CTO, Securestorm, London UK:</strong></p>
+<p>&#8220;The training was well paced and covered all the topics. Peter is a knowledgeable and interesting trainer who used his extensive experience with excellent effect. He guided us into very productive group discussions so that we could link what we learned to our work experiences.</p>
+<p>As a result our entire team has been able to pass the CCSP exam.&#8221;</p></blockquote>
+<p>Goto <a href="https://www.clubcloudcomputing.com/ccsp-ccsk-cloud-security-certifications/">this page for a <strong>one page overview</strong></a> of the differences between CCSK and CCSP.</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2015/07/just-did-the-ccsp-exam/">Just did the CCSP exam</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>New cloud security certification CCSP to complement CCSK</title>
+		<link>https://www.clubcloudcomputing.com/2015/04/new-cloud-security-certification-ccsp-to-complement-ccsk/</link>
+		<comments>https://www.clubcloudcomputing.com/2015/04/new-cloud-security-certification-ccsp-to-complement-ccsk/#comments</comments>
+		<pubDate>Sun, 26 Apr 2015 20:50:43 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[CCSK]]></category>
+		<category><![CDATA[CCSP]]></category>
+		<category><![CDATA[education]]></category>
+		<category><![CDATA[security]]></category>
+
+		<guid isPermaLink="false">https://www.clubcloudcomputing.com/?p=3152</guid>
+		<description><![CDATA[<p>Cloud security certification is getting a new dimension. (Update: I wrote a brief comparison of CCSP versus CCSK). In 2015 the Cloud Security Alliance and (ISC)2 announced a new cloud security certification: Certified Cloud Security Professional or CCSP for short. Read the official announcement here and here. CCSP is supposed to be a more extensive certification [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2015/04/new-cloud-security-certification-ccsp-to-complement-ccsk/">New cloud security certification CCSP to complement CCSK</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Cloud security certification is getting a new dimension.</p>
+<p>(Update: I wrote a brief <a href="https://www.clubcloudcomputing.com/ccsp-ccsk-cloud-security-certifications/">comparison of CCSP versus CCSK</a>).</p>
+<p>In 2015 the Cloud Security Alliance and (ISC)<sup>2</sup> announced a new cloud security certification: Certified Cloud Security Professional or CCSP for short.</p>
+<p>Read the official announcement <a href="https://www.isc2.org/ccsp/default.aspx" target="_blank" rel="noopener">here</a> and <a href="https://cloudsecurityalliance.org/media/news/isc2-and-cloud-security-alliance-introduce-new-cloud-security-certification/" target="_blank" rel="noopener">here</a>.</p>
+<p>CCSP is supposed to be a more extensive certification than CCSK with a more formal exam and a requirement for 5 years in IT; at least three of which must have been spent in security, and at least one year in cloud computing.</p>
+<p>While (ISC)<sup>2</sup> (who also run CISSP; arguably the most relevant IT security certification) coming to the game underlines the relevance and maturity of cloud security, there will be some questions left for people who either have or are pursuing  CCSK certification.</p>
+<p><strong>The important question is: what is the relevance now of CCSK?</strong></p>
+<p>Rest assured that this has my interest as well, as CCSK training is a significant part of my business. That is why I contacted Jim Reavis directly, whom I have met a number of times personally. His answers are reflected in the <a href="https://www.isc2.org/ccsp-faqs/default.aspx?terms=ccsp" target="_blank" rel="noopener">FAQ that you can find on the (ISC)<sup>2</sup> website on CCSP.</a></p>
+<p>Here is a quote from that FAQ:</p>
+<p>“The typical cloud security professional will likely achieve the CCSK first, and then the CCSP credential. Attainment of the CCSK also can be substituted for the one year of cloud security experience”</p>
+<p>Other text in that FAQ document suggests that CCSK can be seen as somewhat of a broad base, on top of which CCSP is built as a deeper and more focused certification.</p>
+<p>So if you are currently thinking of getting CCSK, should this be a moment to reconsider? It does make sense to evaluate your options. If you spend time on a certification, you might as well spend it wisely.</p>
+<p>Getting to CCSP is a path with a lot of unknowns at this time. So here is one thing to consider: participants in my CCSK training report that it helps them  in their day jobs <strong>now</strong>, even more so if they take it as a team. CCSP will take a few months to iron out. Try book CCSP training now, and you will see what I mean.</p>
+<p>On the other hand, if you are already very knowledgeable and experienced in cloud and cloud security, CCSK may not add much to your current business value other than public recognition.</p>
+<p>In any case, should you want to know more about the value of CCSK, I suggest you judge for yourself. One approach is to join my free course: “<em><a href="http://clubcloudcomputing.teachable.com/courses/understand-the-ccsk-cloud-security-certification" target="_blank" rel="noopener">Understand the CCSK cloud security certification</a></em>”.</p>
+<p>To get a fact by fact comparison between <a href="https://www.clubcloudcomputing.com/ccsp-ccsk-cloud-security-certifications/">CCSK and CCSP visit this page</a>, and sign up at the bottom.</p>
+<p>Finally, if you want to know more about my training options, visit <a href="https://www.clubcloudcomputing.com/calendar/">the calendar.</a></p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2015/04/new-cloud-security-certification-ccsp-to-complement-ccsk/">New cloud security certification CCSP to complement CCSK</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.clubcloudcomputing.com/2015/04/new-cloud-security-certification-ccsp-to-complement-ccsk/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Using the Cloud Controls Matrix in procuring better cloud services</title>
+		<link>https://www.clubcloudcomputing.com/2014/05/using-cloud-controls-matrix-procuring-better-cloud-services/</link>
+		<comments>https://www.clubcloudcomputing.com/2014/05/using-cloud-controls-matrix-procuring-better-cloud-services/#respond</comments>
+		<pubDate>Fri, 16 May 2014 13:59:36 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[CCSK]]></category>
+		<category><![CDATA[csa]]></category>
+
+		<guid isPermaLink="false">https://www.clubcloudcomputing.com/?p=2466</guid>
+		<description><![CDATA[<p>The Cloud Security Alliance (CSA) maintains the so-called Cloud Controls Matrix (CCM), a list of controls that can be used to get assurance on the quality of a cloud provider. (See earlier blog post for more details and background on the CCM). The CCM is part of a larger suite of CSA best practices, one [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2014/05/using-cloud-controls-matrix-procuring-better-cloud-services/">Using the Cloud Controls Matrix in procuring better cloud services</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>The Cloud Security Alliance (CSA) maintains the so-called Cloud Controls Matrix (CCM), a list of controls that can be used to get assurance on the quality of a cloud provider. (<a href="https://www.clubcloudcomputing.com/2014/03/join-research-cloud-assurance-practice/">See earlier blog post for more details and background on the CCM</a>). The CCM is part of a larger suite of CSA best practices, one of which is the CAIQ (Common Assessment Initiative Questionnaire). The CAIQ list a number of questions per control, which a provider can answer with yes or no.</p>
+<p>In practice we see that this tool is used in a number of ways in this process.</p>
+<ul>
+<li>CCM and CAIQ list a significant amount of cloud specific controls that are not found in other frameworks such as ISO 27001. Some companies use these as input to their own control frameworks.</li>
+<li>Use the CAIQ as a first level filter. Providers are asked to provide a response with only yes/no answers. After passing that test, the provider can be asked to provide more specific demonstration on controls that matter most to the consumer. It is neither necessary nor efficient to ask the provider to demonstrate evidence on all controls.</li>
+<li>The CCM and CAIQ can be used as input for a ranking activity, where multiple offers are scored on their security assurance.</li>
+<li>Providers can use the CAIQ to demonstrate the breadth of their control, and as a ‘standard response to an RFP’. Examples of these (such as Microsoft Office 365) can be found in the STAR registry (<a href="https://cloudsecurityalliance.org/star/">https://cloudsecurityalliance.org/star/</a>). Although answering to the CAIQ will take some effort, anecdotal evidence suggest that a provider who is already progressing with an assurance initiative will need only a few hours to draft a first version of their CAIQ.</li>
+<li>Providers can use the CCM and CAIQ without publicly disclosing all their control evidence. Full evidence will then only be given to customers that have signed a non-disclosure agreement.</li>
+<li>Providers can refer to the controls that their upstream providers have implemented. For example, an application provider could refer to Microsoft’s Azure CAIQ. In practice however, this still leaves a few questions open.</li>
+</ul>
+<p>Providers are warming up to the idea of using the CCM. For them, it standardizes responses, so they can be reused, which can save work.</p>
+<p>Cloud consumers see the advantage of standardizing control sets. It allows for easier comparison across potential providers, as well as having potential in creating control visibility in the supply chain.</p>
+<h2>Shortcomings and pitfalls</h2>
+<p>The CAIQ as it is developed only allows for yes/no answers. There is no provision for extra information, nor is their guidance on how the provider should qualify their answers (i.e. this is how we do this, this is the extent to which we do this). In practice, most providers do add another column to their response in order to provide more detail.</p>
+<p>There is only minimal experience in efficiently handling assurance obligations over a supply chain of providers, such as a SaaS provider working on top of a PaaS provider working on top of a IaaS provider.</p>
+<p>Cloud consumers like to add their own questions to the CAIQ. They are of course capable of doing it, but the answers will not be reflected in the STAR registration.</p>
+<h2>What should you do?</h2>
+<p>Most companies are procuring cloud services these days. Generally speaking, most of these are SaaS and just a few are IaaS or PaaS. Managing these contracts and relations is a bit out of the scope of this article, but essential bits are to have a clear owner of the contract of every cloud service, even if it is a free service, and some indication of the data classification. From a risk management perspective, it would then be good to have a filled-in CAIQ for every provider.</p>
+<p>For more education on the various risks and control areas in the CCM, you can consider <a href="https://www.clubcloudcomputing.com/ccsk-certificate-of-cloud-security-knowledge-course/">Cloud Security CCSK</a> training.</p>
+<p>As this is ongoing research, please send me comments and notes on this article.</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2014/05/using-cloud-controls-matrix-procuring-better-cloud-services/">Using the Cloud Controls Matrix in procuring better cloud services</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.clubcloudcomputing.com/2014/05/using-cloud-controls-matrix-procuring-better-cloud-services/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Cloud computing can make you more secure</title>
+		<link>https://www.clubcloudcomputing.com/2014/03/cloud-computing-can-make-secure/</link>
+		<comments>https://www.clubcloudcomputing.com/2014/03/cloud-computing-can-make-secure/#respond</comments>
+		<pubDate>Thu, 20 Mar 2014 08:25:35 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[CCSK]]></category>
+		<category><![CDATA[security]]></category>
+		<category><![CDATA[services]]></category>
+
+		<guid isPermaLink="false">https://www.clubcloudcomputing.com/?p=2309</guid>
+		<description><![CDATA[<p>The number one concern cited for avoiding cloud computing is security. And there is a reason for that. Cloud providers have demonstrated some spectacular failures in the past, including Amazon’s near total shutdown of an entire region, Dropbox’s authentication snafu, and innumerous cloud providers that go belly-up. However, in the long run, cloud computing is [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2014/03/cloud-computing-can-make-secure/">Cloud computing can make you more secure</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p dir="ltr">The number one concern cited for avoiding cloud computing is security. And there is a reason for that. Cloud providers have demonstrated some spectacular failures in the past, including <a href="http://aws.amazon.com/message/65648/">Amazon’s near total shutdown of an entire region</a>, <a href="http://news.techworld.com/security/3287206/dropbox-admits-it-suffered-serious-password-failure/">Dropbox’s authentication snafu</a>, and innumerous <a href="http://www.serverwatch.com/server-trends/nirvanix-shut-down-sends-shockwaves-through-the-cloud-services-industry.html">cloud providers that go belly-up</a>.</p>
+<p><span style="line-height: 1.5em">However, in the long run, cloud computing is destined to become more secure than in-house IT. I will briefly describe two dynamics in the industry that point in that direction, with substantiating evidence.</span></p>
+<p><span style="line-height: 1.5em">First, good cloud providers are getting better, as they have more staff available to do security, and bigger economies of scale, allowing them to sustain more security processes. Here is a case in point. Security people are, by nature, pretty paranoid. However, some are more paranoid than others. At a cloud security training I recently conducted, one of the attendants had created an Amazon Web Services account solely for the training. He terminated the entire account on the last afternoon. Just before the training was over, he showed me a message on his smartphone. Within an hour after he terminated the account, his LinkedIN profile was visited by somebody from the Amazon compliance department. Apparently his behavior was suspect. Either that, or they played a game on who can be the most paranoid.</span></p>
+<hr />
+<p><img class="size-full wp-image-1233 alignleft" style="line-height: 3.5em" alt="ccsk" src="https://www.clubcloudcomputing.com/wp-content/uploads/2012/03/ccsk.jpg" width="144" height="76,5" /><br />
+<a href="https://www.clubcloudcomputing.com/ccsk-certificate-of-cloud-security-knowledge-course/">Take a look at my Cloud Security training and get certified by the leading industry coalition and make cloud computing more secure!<br />
+</a></p>
+<hr />
+<p><span style="line-height: 1.5em">As another example, does your IT department track rogue resource usage and credential leakage on a systematic basis? Some cloud providers do this for you, as </span><a style="line-height: 1.5em" href="https://securosis.com/blog/my-500-cloud-security-screwup">this story of API credential leakage</a><span style="line-height: 1.5em"> demonstrates.</span></p>
+<p><span style="line-height: 1.5em">Second, while the previous examples show that cloud providers can become better than the average IT department across the board, in specific areas specialized services are already way ahead of the competence and resources of the average IT department. This is nowadays called ‘</span><a style="line-height: 1.5em" href="https://cloudsecurityalliance.org/research/secaas/#_downloads">Security as a Service</a><span style="line-height: 1.5em">’, or SecaaS (another example of an acronymic cloud nonomatopoeia), but the trend has roots that go back quite a while. Basically the idea is that a lot of security functionality is done in a better way by taking advantage of cloud computing essential characteristics such as elastic scalability and resource pooling.</span></p>
+<p><span style="line-height: 1.5em">Examples of SecaaS that you may be familiar with or are actually using are: Email spam and malware filtering, blacklist and other reputation services, DDoS mitigation and monitoring (i.e. performance). We are also seeing companies using cloud services as a component of a disaster recovery strategy. Innovation in this field is strong.</span></p>
+<p><span style="line-height: 1.5em">So, in conclusion, the market is nearing a ‘tipping point’ where the cloud may actually be more secure than on-premise IT.</span></p>
+<p>For more information, visit <a title="CCSK Course" href="https://www.clubcloudcomputing.com/ccsk-certificate-of-cloud-security-knowledge-course/">CCSK Cloud Security Training</a>.</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2014/03/cloud-computing-can-make-secure/">Cloud computing can make you more secure</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.clubcloudcomputing.com/2014/03/cloud-computing-can-make-secure/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>How does secure software development in the cloud work?</title>
+		<link>https://www.clubcloudcomputing.com/2014/02/secure-software-development-cloud-work/</link>
+		<comments>https://www.clubcloudcomputing.com/2014/02/secure-software-development-cloud-work/#respond</comments>
+		<pubDate>Wed, 19 Feb 2014 10:55:59 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[CCSK]]></category>
+		<category><![CDATA[security]]></category>
+
+		<guid isPermaLink="false">https://www.clubcloudcomputing.com/?p=2204</guid>
+		<description><![CDATA[<p>The typical software development model of develop, deploy and run (with security often as an afterthought) does not work very well in a cloud environment. The two biggest reasons are feature velocity and operational assurance. In a cloud provider environment, functional features come (and sometimes go) on a daily basis. At the same time, both [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2014/02/secure-software-development-cloud-work/">How does secure software development in the cloud work?</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p><span style="line-height: 1.5em;">The typical software development model of develop, deploy and run (with security often as an afterthought) does not work very well in a cloud environment.</span></p>
+<p>The two biggest reasons are feature velocity and operational assurance. In a cloud provider environment, functional features come (and sometimes go) on a daily basis. At the same time, both the code and the sizing of the machinery have to adapt to rapidly changing usage patterns. This leads to automating more of the deployment process. That deployment then becomes code that somebody has to write.</p>
+<p>Hence the integration of Dev and Ops: DevOps.</p>
+<p>Interestingly, security can be integrated as well. Security also requires feature velocity, though in this case it often is a negative feature: stopping some kind of exploit. And the most thorough security comes from automating security controls, for example by baking them automatically in the virtual machines that run the new code at deployment time.</p>
+<p>For a little more discussion I would like to refer to a blog post by my friends at Securosis. These guys have an awesome IT security blog, lots of solid research, and they are very knowledgeable on cloud computing as well. In fact, they wrote the <a title="CCSK Course" href="https://www.clubcloudcomputing.com/ccsk-certificate-of-cloud-security-knowledge-course/">CCSK training that I am delivering</a>. In the blog post you see a mention to one of their CCSK sessions. It all feels a lot like my sessions.</p>
+<p>So here is the link to <a href="https://securosis.com/blog/rsa-conference-guide-2014-watch-list-devops" target="_blank">DevOps, Cloud, and the Death of Traditional IT</a>.</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2014/02/secure-software-development-cloud-work/">How does secure software development in the cloud work?</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.clubcloudcomputing.com/2014/02/secure-software-development-cloud-work/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Why I go to Manila for Cloud Security</title>
+		<link>https://www.clubcloudcomputing.com/2013/11/go-manila-cloud-security/</link>
+		<comments>https://www.clubcloudcomputing.com/2013/11/go-manila-cloud-security/#respond</comments>
+		<pubDate>Wed, 20 Nov 2013 10:33:22 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[CCSK]]></category>
+		<category><![CDATA[education]]></category>
+
+		<guid isPermaLink="false">https://www.clubcloudcomputing.com/?p=1553</guid>
+		<description><![CDATA[<p>Next week (25/26 November 2013) I will deliver Cloud Security (CCSK) training near Manila, Philippines. If you are interested in attending, drop me a line, we may have a good seat for you. It is with very mixed feelings that I will travel to Manila. Is delivering CCSK training relevant in a country that has [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2013/11/go-manila-cloud-security/">Why I go to Manila for Cloud Security</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Next week (25/26 November 2013) I will deliver <a title="CCSK ‘Certificate of Cloud Security Knowledge’ Course" href="https://www.clubcloudcomputing.com/ccsk-certificate-of-cloud-security-knowledge-course/">Cloud Security (CCSK) training</a> near Manila, Philippines. If you are interested in attending, drop me a line, we may have a good seat for you.</p>
+<p>It is with very mixed feelings that I will travel to Manila. Is delivering CCSK training relevant in a country that has been hit by what is probably the largest typhoon in history, where thousands have died and millions are suffering? Is this the best use of time for me and my attendants? I have asked myself these questions and I have come to the conclusion that it is. My best contribution is to keep doing my job, which is helping people apply cloud computing in the best possible way.</p>
+<p>The 2011 earthquake that hit Japan had a peculiar effect on the perception of cloud computing. My friends over there tell me that the earthquake woke people up to the notion that cloud computing can be more resilient to natural disasters than traditional data-centers. This is quite a dramatic shift in attitude for a country where corporate IT was generally approached in a conservative way. Now they have accelerated their adoption of cloud computing.</p>
+<p>Last year I visited Bangladesh twice to deliver cloud training. I had a similar question there. Does it make sense to develop advanced technology in a country that is among the poorest in the world, with beggars everywhere? My contacts in Bangladesh think it does, and are convinced that it advances their development out of poverty.</p>
+<p>If we believe that IT can better coordinate people in their personal and professional lives, it makes sense to work on IT delivery models that are more accessible and resilient. Cloud computing is such a model.</p>
+<p>So, when we start next Monday in Makita, I will take time with my attendants to think of the current situation and its effect on their personal lives and families. Then we can discuss how cloud computing can help them better prepare for the next emergency.</p>
+<p>I know a lot of people’s hearts and minds are with the victims, and are looking for a way to demonstrate that. If you have a message, you can send it to me, and I will personally relay it to the people that I meet there.</p>
+<p>&nbsp;</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2013/11/go-manila-cloud-security/">Why I go to Manila for Cloud Security</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.clubcloudcomputing.com/2013/11/go-manila-cloud-security/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Can we simplify cloud security?</title>
+		<link>https://www.clubcloudcomputing.com/2012/09/can-we-simplify-cloud-security/</link>
+		<comments>https://www.clubcloudcomputing.com/2012/09/can-we-simplify-cloud-security/#comments</comments>
+		<pubDate>Sun, 30 Sep 2012 13:00:18 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[CCSK]]></category>
+		<category><![CDATA[grc]]></category>
+
+		<guid isPermaLink="false">https://www.clubcloudcomputing.com/?p=833</guid>
+		<description><![CDATA[<p>Last week, the Cloud Security Alliance had its EMEA congress in Amsterdam. The day before, I got a chance to be the instructor on a CCSK workshop (Certificate of Cloud Security Knowledge). The lineup of industry experts at the congress was awesome, it included people directly involved in the security of the biggest cloud computing [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2012/09/can-we-simplify-cloud-security/">Can we simplify cloud security?</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Last week, the Cloud Security Alliance had its EMEA congress in Amsterdam. The day before, I got a chance to be the instructor on a CCSK workshop (<a title="CCSK ‘Certificate of Cloud Security Knowledge’ Course" href="https://www.clubcloudcomputing.com/ccsk-certificate-of-cloud-security-knowledge-course/">Certificate of Cloud Security Knowledge</a>).</p>
+<p>The lineup of industry experts at the congress was awesome, it included people directly involved in the security of the biggest cloud computing providers in the world, as well as security officers of their largest consumers. And they talked to one another in the most productive way.</p>
+<p>One example of a reassuring statement was from an Amazon security officer: “we don’t have a security budget, our security funds are effectively unlimited”.</p>
+<p>The feeling I had after delivering the CCSK training was that people need to know more about how to contract a cloud provider in a professional way. In particular it is important to know how to manage the risks. For example, the customer might need to ensure that data at rest with the provider is encrypted. While evaluating a potential cloud provider, it might be important to check this ‘control’.</p>
+<p>Now try to think how this scales from the perspective of the cloud consumer: they need to check this and a few hundred other controls for potentially dozens of cloud providers. Similarly, the cloud providers get these questions from most of their prospective customers. If cloud computing is to deliver on its promise, this is a process that needs structure and automation. If not, it will become too cumbersome.</p>
+<p>Just imagine what it would take to audit all your cloud providers on a regular basis. Now think about a few hundred controls for a few dozen cloud providers and doing this every couple of weeks. Think of the paperwork associated with that, for you as well as for the cloud provider. I know of a smallish provider who has somebody full-time dedicated to answering these questions.</p>
+<p>There has to be a better way, and I think the Cloud Security Alliance is the best community to develop it with.</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2012/09/can-we-simplify-cloud-security/">Can we simplify cloud security?</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.clubcloudcomputing.com/2012/09/can-we-simplify-cloud-security/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>CCSK training in Kuala Lumpur &#8211; trip report</title>
+		<link>https://www.clubcloudcomputing.com/2012/08/ccsk-training-in-kuala-lumpur-trip-report/</link>
+		<comments>https://www.clubcloudcomputing.com/2012/08/ccsk-training-in-kuala-lumpur-trip-report/#respond</comments>
+		<pubDate>Fri, 17 Aug 2012 07:45:43 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[CCSK]]></category>
+		<category><![CDATA[clouds]]></category>
+		<category><![CDATA[security]]></category>
+
+		<guid isPermaLink="false">http://staging209.clubcloudcomputing.com/?p=717</guid>
+		<description><![CDATA[<p>Last week I delivered a two-day CCSK (certificate of cloud security knowledge) in Kuala Lumpur. The typical structure of this training, as suggested by the Cloud Security Alliance, calls for a day of lecture followed by a day of practical exercises.  However, I mixed lecture with case study and exercise, because I have experienced that [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2012/08/ccsk-training-in-kuala-lumpur-trip-report/">CCSK training in Kuala Lumpur &#8211; trip report</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Last week I delivered a two-day <a title="CCSK ‘Certificate of Cloud Security Knowledge’ Course" href="https://www.clubcloudcomputing.com/ccsk-certificate-of-cloud-security-knowledge-course">CCSK (certificate of cloud security knowledge)</a> in Kuala Lumpur. The typical structure of this training, as suggested by the Cloud Security Alliance, calls for a day of lecture followed by a day of practical exercises.  However, I mixed lecture with case study and exercise, because I have experienced that this works much better. If the examples have been worked through by the individuals, it becomes easy to refer back to them in the lectures.</p>
+<p>It was good to be back in KL (the<a href="https://www.clubcloudcomputing.com/2012/05/cloud-computing-in-kuala-lumpur/"> last time</a> I taught Cloud Essentials and Virtualization Essentials).  I really like the Asian atmosphere, the multicultural vibe of Malaysians, Chinese, Indian and even some European people. All of these were represented in my course too. It was great working with them, even though we sometimes have to get used to our accents.</p>
+<p>Cloud security as a topic is pretty new, but interest is already growing rapidly. I am happy with my KL partners and hope to be back in November for more cloud courses. To have a look at my courses and the course calendar visit my <a title="Training" href="https://www.clubcloudcomputing.com/training/">list of cloud courses</a>.</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2012/08/ccsk-training-in-kuala-lumpur-trip-report/">CCSK training in Kuala Lumpur &#8211; trip report</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.clubcloudcomputing.com/2012/08/ccsk-training-in-kuala-lumpur-trip-report/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>The cloud world will be a safer place</title>
+		<link>https://www.clubcloudcomputing.com/2012/04/ccskexam/</link>
+		<comments>https://www.clubcloudcomputing.com/2012/04/ccskexam/#respond</comments>
+		<pubDate>Wed, 18 Apr 2012 12:00:39 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[CCSK]]></category>
+
+		<guid isPermaLink="false">http://staging209.clubcloudcomputing.com/?p=546</guid>
+		<description><![CDATA[<p>The Certificate of Cloud Security Knowledge is backed by the Cloud Security Alliance, in which basically every major cloud player is represented. &#160; Today I managed to pass the exam, so I am now officially CCSK stamped. Next on my list is becoming a trainer for that. Although CCSK is at the introductory level, it [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2012/04/ccskexam/">The cloud world will be a safer place</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>The Certificate of Cloud Security Knowledge is backed by the Cloud Security Alliance, in which basically <a title="CSA" href="https://cloudsecurityalliance.org/membership/corporate-members/" target="_blank">every major cloud player is represented</a>.<a href="https://www.clubcloudcomputing.com/wp-content/uploads/2012/03/ccsk.jpg"><img class="alignleft wp-image-1233 size-full" src="https://www.clubcloudcomputing.com/wp-content/uploads/2012/03/ccsk.jpg" alt="ccsk" width="192" height="102" /></a></p>
+<p>&nbsp;</p>
+<p>Today I managed to pass the exam, so I am now officially CCSK stamped. Next on my list is becoming a trainer for that.</p>
+<p>Although CCSK is at the introductory level, it does lead to risk awareness across a wide range of cloud related topics. The 13 domains  in which the knowledge is organized range from governance and compliance through various data and software lifecycle models to known technical risks and identity management. If you thought you knew all the cloud risks, you will think different after you have studied this material!</p>
+<p>Personally, I think a strong side of the material is that, despite its elaboration of risks, it never prescribes how an organization should handle its cloud security. Instead, the approach is to make sure the risk tolerance of the organisation is in alignment with the risk takes by working with cloud providers. This might actually differ by application. I.e. running encrypted backups in the cloud has a very different risk profile from running your payment services in the cloud.</p>
+<p>Anybody involved in contracting, architecting, developing, deploying or managing cloud applications should at least have a look at this material. If you are serious you want to pass the exam too.</p>
+<p>The study material that I work with goes beyond the body of knowledge in that it also elaborates on the risk mitigation strategies for specific risks. The general section on cloud computing has a bit of overlap with the course on cloud essentials that I also teach, but that will only prove to be a benefit to the students who study both.</p>
+<p>See my <a title="Store" href="https://www.clubcloudcomputing.com/calendar">course lists on this site</a> and <a title="cloud computing at eventbrite" href="http://clubcloudcomputing.eventbrite.com/" target="_blank">on eventbrite</a> for upcoming events.</p>
+<p>&nbsp;</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2012/04/ccskexam/">The cloud world will be a safer place</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.clubcloudcomputing.com/2012/04/ccskexam/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>

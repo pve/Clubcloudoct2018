@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>dns</title>
+	<atom:link href="https://www.clubcloudcomputing.com/category/dns/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.clubcloudcomputing.com</link>
+	<description></description>
+	<lastBuildDate>Mon, 22 Oct 2018 15:15:59 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.8</generator>
+
+<image>
+	<url>https://www.clubcloudcomputing.com/wp-content/uploads/2017/02/cropped-favi-32x32.jpg</url>
+	<title>dns</title>
+	<link>https://www.clubcloudcomputing.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Cloud asset management &#8211; basic features</title>
+		<link>https://www.clubcloudcomputing.com/2012/06/cloud-asset-management-basic-features/</link>
+		<comments>https://www.clubcloudcomputing.com/2012/06/cloud-asset-management-basic-features/#respond</comments>
+		<pubDate>Fri, 15 Jun 2012 09:32:36 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[dns]]></category>
+
+		<guid isPermaLink="false">http://staging209.clubcloudcomputing.com/?p=657</guid>
+		<description><![CDATA[<p>One of the fundamental characteristics of cloud computing is rapid elasticity: resources such as server instances can appear and disappear rapidly. Good IT management practice requires that we administer and monitor our resources independent from the provider of these resources. So we have services and assets on the one hand and asset administration and monitoring [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2012/06/cloud-asset-management-basic-features/">Cloud asset management &#8211; basic features</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>One of the fundamental characteristics of cloud computing is rapid elasticity: resources such as server instances can appear and disappear rapidly.</p>
+<p>Good IT management practice requires that we administer and monitor our resources independent from the provider of these resources. So we have services and assets on the one hand and asset administration and monitoring on the other hand. Asset administration often revolves around some kind of &#8216;<a title="CMDB" href="http://en.wikipedia.org/wiki/Configuration_management_database" target="_blank" rel="noopener">configuration management database CMDB</a>&#8216;. The challenge in the cloud is that this database changes much more rapidly.</p>
+<p>CMDBs are notoriously incomplete. With cloud computing this is likely to be worse. How can new tool functionality help?</p>
+<p>In this post I want to give some examples and outline some basic features for this. My favourite way of doing this is taking a small example and then expand it to illustrate the concepts.</p>
+<p>Take a website. Even if it is procured as a service rather than ran on company owned servers, it should be in the CMDB. Basic monitoring for it would check if the URL still responds. If it fails to respond in time, an alert is sent.</p>
+<p>One way of extending this is to figure out what the &#8216;adjacent&#8217; assets are. Examples include DNS records and nameservers, because these are essential for the correct delivery of service, as perceived by the users. Other examples are any associated third party content and content distribution networks.</p>
+<p>How would this work? The asset management tool and the monitoring service are likely to be independent tools, so there could be some interaction where, driven by asset management policies, monitoring service rules are added as appropriate. I.e when you list a webserver in the CMDB it will be automatically added to the monitoring service, and the adjacent DNS assets are automatically added as well. This speeds up troubleshooting, as the monitoring service gives inside into the component that is failing.</p>
+<p>Another situation is with auto-scaling servers. When load increases, auto-scaling automatically adds server instances.  It would be nice if auto-scaling would also register the instance in the CMDB as well as with the monitoring service. In fact, the instance could do this itself, by way of a &#8216;please monitor me&#8217; message.</p>
+<p>Now if you think this is simple, please figure out what to do when server instances are stopped. What do you want to happen with the CMDB entries and the monitoring data? You don&#8217;t want to delete it immediately.</p>
+<p>Finally, turning things around, the CMDB should also contain the monitoring rules themselves. Remember they have configuration data, they cost money, so they are assets.</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2012/06/cloud-asset-management-basic-features/">Cloud asset management &#8211; basic features</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.clubcloudcomputing.com/2012/06/cloud-asset-management-basic-features/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>DNS attack measurements and graphs</title>
+		<link>https://www.clubcloudcomputing.com/2010/08/dns-attack-measurements-and-graphs/</link>
+		<comments>https://www.clubcloudcomputing.com/2010/08/dns-attack-measurements-and-graphs/#respond</comments>
+		<pubDate>Fri, 20 Aug 2010 18:20:00 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[clouds]]></category>
+		<category><![CDATA[dns]]></category>
+
+		<guid isPermaLink="false">http://bitnami.clubcloudcomputing.com/2010/08/dns-attack-measurements-and-graphs/</guid>
+		<description><![CDATA[<p>As a followup to my earlier post, here are some more details on the denial of service attack on DNS Made Easy, Aug 7th 2010. The first graph represents the time it took to resolve a domainname to an IP address, averaged by the hour. The domains all have their records served by DNS Made [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2010/08/dns-attack-measurements-and-graphs/">DNS attack measurements and graphs</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<div class="separator" style="clear: both; text-align: center;"></div>
+<p>As a followup to my <a href="https://www.clubcloudcomputing.com/2010/08/an-attack-on-dns-is-an-attack-on-the-internet/">earlier post</a>, here are some more details on the denial of service attack on DNS Made Easy, Aug 7th 2010.</p>
+<p>The first graph represents the time it took to resolve a domainname to an IP address, averaged by the hour. The domains all have their records served by DNS Made Easy. Each datapoint represents over 100 measurements.</p>
+<p>The second graph represents the downtime of the websites with these domainnames. This includes all error types, including DNS resolve problems, server failure and other problems.</p>
+<p>These graphs clearly show the degraded performance as a result of the denial of service attack occurring between 8 am and 4 pm (Greenwich Mean Time &#8211; UTC), which is a bit longer than the provider claims.</p>
+<div class="separator" style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="http://1.bp.blogspot.com/_CtD78qRIIdU/TG7Ech_avuI/AAAAAAAAAhU/7PhLB51kH_Q/s1600/dnsme1.png"><img alt="" src="https://1.bp.blogspot.com/_CtD78qRIIdU/TG7Ech_avuI/AAAAAAAAAhU/7PhLB51kH_Q/s400/dnsme1.png" width="400" height="261" border="0" /></a></div>
+<div class="separator" style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="http://1.bp.blogspot.com/_CtD78qRIIdU/TG7ElileveI/AAAAAAAAAhc/l_YAZyOgQIc/s1600/dnsme2.png"><img alt="" src="https://1.bp.blogspot.com/_CtD78qRIIdU/TG7ElileveI/AAAAAAAAAhc/l_YAZyOgQIc/s400/dnsme2.png" width="400" height="262" border="0" /></a></div>
+<p>The third and fourth graph represent the same reports, but for domains that are totally independent of DNS Made Easy. Each datapoint represents approximately 1500 measurements. A somewhat similar response time effect is seen, although there does not appear to be much downtime. The downtime that is visible has other causes. Please note that these graphs have scales different from the first two graphs.</p>
+<div class="separator" style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="http://2.bp.blogspot.com/_CtD78qRIIdU/TG7FJ-f6HYI/AAAAAAAAAhk/XOGvW52tCtU/s1600/dnsme3.png"><img alt="" src="https://2.bp.blogspot.com/_CtD78qRIIdU/TG7FJ-f6HYI/AAAAAAAAAhk/XOGvW52tCtU/s400/dnsme3.png" width="400" height="262" border="0" /></a></div>
+<div class="separator" style="clear: both; text-align: center;"></div>
+<div class="separator" style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="http://1.bp.blogspot.com/_CtD78qRIIdU/TG7FSQkjzYI/AAAAAAAAAhs/Omgx4lCg9vY/s1600/dnsme4.png"><img alt="" src="https://1.bp.blogspot.com/_CtD78qRIIdU/TG7FSQkjzYI/AAAAAAAAAhs/Omgx4lCg9vY/s400/dnsme4.png" width="400" height="262" border="0" /></a></div>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2010/08/dns-attack-measurements-and-graphs/">DNS attack measurements and graphs</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.clubcloudcomputing.com/2010/08/dns-attack-measurements-and-graphs/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>An attack on DNS is an attack on the Internet</title>
+		<link>https://www.clubcloudcomputing.com/2010/08/an-attack-on-dns-is-an-attack-on-the-internet/</link>
+		<comments>https://www.clubcloudcomputing.com/2010/08/an-attack-on-dns-is-an-attack-on-the-internet/#comments</comments>
+		<pubDate>Sat, 14 Aug 2010 09:46:00 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[clouds]]></category>
+		<category><![CDATA[dns]]></category>
+
+		<guid isPermaLink="false">http://bitnami.clubcloudcomputing.com/2010/08/an-attack-on-dns-is-an-attack-on-the-internet/</guid>
+		<description><![CDATA[<p>On Saturday Aug 7th , 2010, DNS provider DNS Made Easy was the target of a very large denial of service attack.  As far as can be determined the total traffic volume exceeded 40 Gigabit/second, enough to saturate 1 million dialup Internet lines. Several of DNS Made Easy’s upstream providers had saturated backbone links themselves. [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2010/08/an-attack-on-dns-is-an-attack-on-the-internet/">An attack on DNS is an attack on the Internet</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<div class="MsoNormal"><span lang="EN-US" style="mso-ansi-language: EN-US;">On Saturday Aug 7<sup>th </sup>, 2010, DNS provider DNS Made Easy was the target of a very large denial of service attack.<span style="mso-spacerun: yes;">  </span>As far as can be determined the total traffic volume exceeded 40 Gigabit/second, enough to saturate 1 million dialup Internet lines. Several of DNS Made Easy’s upstream providers had saturated backbone links themselves. There are indications that not only DNS Made Easy suffered from this attack, but the Internet as a whole.</span></div>
+<div class="MsoNormal"></div>
+<div class="MsoNormal"><span lang="EN-US" style="mso-ansi-language: EN-US;">An attack on DNS is an attack on the Internet in two ways. Name servers are a critical point in almost every Internet access. But as our research shows, the consequences of this attack were wider than the attack’s primary target.</span></div>
+<div class="MsoNormal"></div>
+<div class="MsoNormal"><span lang="EN-US" style="mso-ansi-language: EN-US;">According to DNS Made Easy, service impact was limited. According to our measurements it was around 5-10% on a global basis.</span></div>
+<div class="MsoNormal" style="margin-left: 35.4pt;"><span lang="EN-US" style="mso-ansi-language: EN-US;">“In some regions there were no issues, in other regions  outages lasted a few minutes, while in other regions there were sporadic (up and down) outages for a couple of hours.  In Europe for instance there was never any downtime.  In Asia downtime continued longer than other regions. In United States the west coast was hit much harder and experienced issues longer than the central and east coast.” </span></div>
+<div class="MsoNormal" style="margin-left: 35.4pt;"></div>
+<div class="MsoNormal"><span lang="EN-US" style="mso-ansi-language: EN-US;">DNS was designed from the ground up to be resilient to individual server failures. In theory this should make the loss of a few servers irrelevant. On top of this, the provider has implemented an anycast routing infrastructure, which works to ensure that DNS queries all over the world are resolved regionally. Note that because of the anycast routing of this provider, outages are related to the location where the clients (resolvers) are located, not the servers whose names are being queried.</span></div>
+<div class="MsoNormal"></div>
+<div class="MsoNormal"><span lang="EN-US" style="mso-ansi-language: EN-US;">However, measurements/analyses that I made in collaboration with WatchMouse.com have uncomfortable implications. WatchMouse regularly measures the performance, including the DNS resolve time of thousands of sites, through a network of more than 40 stations spread over all continents. <span style="mso-spacerun: yes;"> </span></span></div>
+<div class="MsoNormal"></div>
+<div class="MsoNormal"><span lang="EN-US" style="mso-ansi-language: EN-US;">In a dataset with sites whose DNS records were served by the provider, resolve times rose from a normal average of less than 100 milliseconds, to over 200 milliseconds in the hours of the attack. Average failure rates in this dataset are around 1%. During the attack hours, this rose to 5% and even 10%. As can be expected, these failure rates differed greatly by monitoring station, though it is hard to see a geographical pattern.</span></div>
+<div class="MsoNormal"></div>
+<div class="MsoNormal"><span lang="EN-US" style="mso-ansi-language: EN-US;">Another dataset consists of regular measurements of more than 300 sites, with a total of more than 300.000 individual measurements over a period of 8 days. In contrast, none of these sites had their DNS service from DNS Made Easy. These sites are operated by a wide variety of industries.</span></div>
+<div class="MsoNormal"></div>
+<div class="MsoNormal"><span lang="EN-US" style="mso-ansi-language: EN-US;">On the seven days leading up to the attack, the daily average DNS resolution time in this dataset was between 352 milliseconds and 379 milliseconds. On the 7<sup>th</sup> of August, the average was 453 milliseconds, which is a significantly higher. Averaged by the hour, resolution times rose to 600 and even 800 milliseconds. There are failure rate fluctuations in this dataset, but they appear to be uncorrelated to the attack.</span></div>
+<div class="MsoNormal"></div>
+<div class="MsoNormal"><span lang="EN-US" style="mso-ansi-language: EN-US;">Note that these measurements support the provider’s claim of shorter resolve times. A regular DNS lookup takes 350 milliseconds, but DNS Made Easy’s average is less than 100 milliseconds.</span></div>
+<div class="MsoNormal"></div>
+<div class="MsoNormal"><span lang="EN-US" style="mso-ansi-language: EN-US;">In conclusion, these results are disturbing because even sites that are TOTALLY UNRELATED to DNS Made Easy were affected in their response times. <span style="mso-spacerun: yes;"> </span>The implication of this is that this denial of service attack was big enough to have collateral damage on the rest of the Internet. </span></div>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2010/08/an-attack-on-dns-is-an-attack-on-the-internet/">An attack on DNS is an attack on the Internet</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.clubcloudcomputing.com/2010/08/an-attack-on-dns-is-an-attack-on-the-internet/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Amazon CloudFront movements</title>
+		<link>https://www.clubcloudcomputing.com/2010/06/amazon-cloudfront-movements/</link>
+		<comments>https://www.clubcloudcomputing.com/2010/06/amazon-cloudfront-movements/#comments</comments>
+		<pubDate>Sun, 20 Jun 2010 19:15:00 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[clouds]]></category>
+		<category><![CDATA[dns]]></category>
+
+		<guid isPermaLink="false">http://bitnami.clubcloudcomputing.com/2010/06/amazon-cloudfront-movements/</guid>
+		<description><![CDATA[<p>This article, a follow up on an earlier blogpost, gives a more detailed look at the location of the Amazon CloudFront service. This location is derived from the time it takes to connect to it from a number of locations. The summary is that CloudFront is on the average about 40-50 milliseconds away from a random [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2010/06/amazon-cloudfront-movements/">Amazon CloudFront movements</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>This article, a follow up on </span><a href="/2008/12/which-computing-cloud-is-closer/"><span class="Apple-style-span" style="font-size: medium;">an earlier blogpost</span></a><span class="Apple-style-span" style="font-size: medium;">, gives a more detailed look at the location of the Amazon CloudFront service. This location is derived from the time it takes to connect to it from a number of locations.</span></div>
+<div class="MsoNormal"><span class="Apple-style-span" style="font-size: medium;"><br />
+</span></div>
+<div class="MsoNormal"><span class="Apple-style-span" style="font-size: medium;">The summary is that CloudFront is on the average about 40-50 milliseconds away from a random point on the Internet.  This is pretty good compared to a site located in e.g. New York (120 milliseconds) and is in the same league as other content distribution networks. In specific markets, it is pretty near: San Francisco: 3 milliseconds, New York: 13 milliseconds, Western Europe: 1-30 milliseconds.</span></div>
+<div class="MsoNormal"><span class="Apple-style-span" style="font-size: medium;"><br />
+</span></div>
+<div class="MsoNormal"><span class="Apple-style-span" style="font-size: medium;">According to Amazon, </span><span style="color: black; font-family: Verdana, sans-serif; line-height: 115%;" lang="EN-US"><span class="Apple-style-span" style="font-size: medium;">CloudFront</span></span><span style="color: black; font-family: Verdana, sans-serif; line-height: 115%;" lang="EN-US"><span class="Apple-style-span" style="font-size: medium;"> </span></span><a href="http://aws.amazon.com/cloudfront/#details"><span class="Apple-style-span" style="font-size: medium;">is in 16 locations</span></a><span class="Apple-style-span" style="font-size: medium;">, in contrast to the S3 storage service and the EC2 compute service, which have only 4 points of presence around the world. </span></div>
+<div class="MsoNormal"><span class="Apple-style-span" style="font-size: medium;"><br />
+</span></div>
+<div class="MsoNormal"><span class="Apple-style-span" style="font-size: medium;">The following table gives distances (in milliseconds) from selected locations of the monitoring network to Amazon CloudFront (cities annotated with CF have CloudFront locations):</span></div>
+<div class="MsoNormal"><span class="Apple-style-span" style="color: white;"><span class="Apple-style-span" style="border-collapse: collapse;"><span class="Apple-style-span" style="color: black;"><span class="Apple-style-span" style="border-collapse: separate;"><span class="Apple-style-span" style="font-size: medium;"><br />
+</span></span></span></span></span></div>
+<div>
+<table class="MsoTableLightList" style="border-collapse: collapse; border-color: initial; border-width: initial; width: 347px; border-style: none;" border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr style="height: 15.0pt; mso-yfti-firstrow: yes; mso-yfti-irow: -1;">
+<td style="background: black; border-bottom: none; border-left: solid black 1.0pt; border-right: none; border-top: solid black 1.0pt; height: 15.0pt; mso-background-themecolor: text1; mso-border-left-themecolor: text1; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.3pt;" valign="top" nowrap="nowrap" width="66">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 5; text-align: right;" align="right"><strong><span style="color: white; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri; mso-themecolor: background1;">Distance</span></strong></div>
+</td>
+<td style="background: black; border-top: solid black 1.0pt; border: none; height: 15.0pt; mso-background-themecolor: text1; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 90.8pt;" valign="top" nowrap="nowrap" width="121">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 1;"><strong><span style="color: white; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri; mso-themecolor: background1;">City</span></strong></div>
+</td>
+<td style="background: black; border-top: solid black 1.0pt; border: none; height: 15.0pt; mso-background-themecolor: text1; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 98.7pt;" valign="top" nowrap="nowrap" width="132">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 1;"><strong><span style="color: white; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri; mso-themecolor: background1;">Country</span></strong></div>
+</td>
+<td style="background: black; border-bottom: none; border-left: none; border-right: solid black 1.0pt; border-top: solid black 1.0pt; height: 15.0pt; mso-background-themecolor: text1; mso-border-right-themecolor: text1; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 21.75pt;" valign="top" width="29">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 1;"><strong><span style="color: white; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri; mso-themecolor: background1;">CF</span></strong></div>
+</td>
+</tr>
+<tr style="height: 15.0pt; mso-yfti-irow: 0;">
+<td style="border-right: none; border: solid black 1.0pt; height: 15.0pt; mso-border-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.3pt;" valign="top" nowrap="nowrap" width="66">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 68; text-align: right;" align="right"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-weight: bold; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">1</span></div>
+</td>
+<td style="border-bottom: solid black 1.0pt; border-left: none; border-right: none; border-top: solid black 1.0pt; height: 15.0pt; mso-border-bottom-themecolor: text1; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 90.8pt;" valign="top" nowrap="nowrap" width="121">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 64;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Amsterdam</span></div>
+</td>
+<td style="border-bottom: solid black 1.0pt; border-left: none; border-right: none; border-top: solid black 1.0pt; height: 15.0pt; mso-border-bottom-themecolor: text1; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 98.7pt;" valign="top" nowrap="nowrap" width="132">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 64;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Netherlands</span></div>
+</td>
+<td style="border-left: none; border: solid black 1.0pt; height: 15.0pt; mso-border-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 21.75pt;" valign="top" width="29">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 64;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">CF</span></div>
+</td>
+</tr>
+<tr style="height: 15.0pt; mso-yfti-irow: 1;">
+<td style="border-left: solid black 1.0pt; border: none; height: 15.0pt; mso-border-left-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.3pt;" valign="top" nowrap="nowrap" width="66">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 4; text-align: right;" align="right"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-weight: bold; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">1</span></div>
+</td>
+<td style="border: none; height: 15.0pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 90.8pt;" valign="top" nowrap="nowrap" width="121">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Ashburn</span></div>
+</td>
+<td style="border: none; height: 15.0pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 98.7pt;" valign="top" nowrap="nowrap" width="132">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">U.S.A.</span></div>
+</td>
+<td style="border-right: solid black 1.0pt; border: none; height: 15.0pt; mso-border-right-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 21.75pt;" valign="top" width="29">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">CF</span></div>
+</td>
+</tr>
+<tr style="height: 15.0pt; mso-yfti-irow: 2;">
+<td style="border-right: none; border: solid black 1.0pt; height: 15.0pt; mso-border-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.3pt;" valign="top" nowrap="nowrap" width="66">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 68; text-align: right;" align="right"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-weight: bold; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">2</span></div>
+</td>
+<td style="border-bottom: solid black 1.0pt; border-left: none; border-right: none; border-top: solid black 1.0pt; height: 15.0pt; mso-border-bottom-themecolor: text1; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 90.8pt;" valign="top" nowrap="nowrap" width="121">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 64;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Santa Clara</span></div>
+</td>
+<td style="border-bottom: solid black 1.0pt; border-left: none; border-right: none; border-top: solid black 1.0pt; height: 15.0pt; mso-border-bottom-themecolor: text1; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 98.7pt;" valign="top" nowrap="nowrap" width="132">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 64;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">U.S.A.</span></div>
+</td>
+<td style="border-left: none; border: solid black 1.0pt; height: 15.0pt; mso-border-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 21.75pt;" valign="top" width="29">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 64;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">CF</span></div>
+</td>
+</tr>
+<tr style="height: 15.0pt; mso-yfti-irow: 3;">
+<td style="border-left: solid black 1.0pt; border: none; height: 15.0pt; mso-border-left-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.3pt;" valign="top" nowrap="nowrap" width="66">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 4; text-align: right;" align="right"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-weight: bold; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">2</span></div>
+</td>
+<td style="border: none; height: 15.0pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 90.8pt;" valign="top" nowrap="nowrap" width="121">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Dallas</span></div>
+</td>
+<td style="border: none; height: 15.0pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 98.7pt;" valign="top" nowrap="nowrap" width="132">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">U.S.A.</span></div>
+</td>
+<td style="border-right: solid black 1.0pt; border: none; height: 15.0pt; mso-border-right-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 21.75pt;" valign="top" width="29">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">CF</span></div>
+</td>
+</tr>
+<tr style="height: 15.0pt; mso-yfti-irow: 4;">
+<td style="border-right: none; border: solid black 1.0pt; height: 15.0pt; mso-border-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.3pt;" valign="top" nowrap="nowrap" width="66">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 68; text-align: right;" align="right"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-weight: bold; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">3</span></div>
+</td>
+<td style="border-bottom: solid black 1.0pt; border-left: none; border-right: none; border-top: solid black 1.0pt; height: 15.0pt; mso-border-bottom-themecolor: text1; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 90.8pt;" valign="top" nowrap="nowrap" width="121">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 64;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Hong Kong</span></div>
+</td>
+<td style="border-bottom: solid black 1.0pt; border-left: none; border-right: none; border-top: solid black 1.0pt; height: 15.0pt; mso-border-bottom-themecolor: text1; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 98.7pt;" valign="top" nowrap="nowrap" width="132">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 64;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">China</span></div>
+</td>
+<td style="border-left: none; border: solid black 1.0pt; height: 15.0pt; mso-border-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 21.75pt;" valign="top" width="29">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 64;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">CF</span></div>
+</td>
+</tr>
+<tr style="height: 15.0pt; mso-yfti-irow: 5;">
+<td style="border-left: solid black 1.0pt; border: none; height: 15.0pt; mso-border-left-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.3pt;" valign="top" nowrap="nowrap" width="66">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 4; text-align: right;" align="right"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-weight: bold; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">3</span></div>
+</td>
+<td style="border: none; height: 15.0pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 90.8pt;" valign="top" nowrap="nowrap" width="121">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Singapore</span></div>
+</td>
+<td style="border: none; height: 15.0pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 98.7pt;" valign="top" nowrap="nowrap" width="132">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Singapore</span></div>
+</td>
+<td style="border-right: solid black 1.0pt; border: none; height: 15.0pt; mso-border-right-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 21.75pt;" valign="top" width="29">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">CF</span></div>
+</td>
+</tr>
+<tr style="height: 15.0pt; mso-yfti-irow: 6;">
+<td style="border-right: none; border: solid black 1.0pt; height: 15.0pt; mso-border-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.3pt;" valign="top" nowrap="nowrap" width="66">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 68; text-align: right;" align="right"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-weight: bold; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">4</span></div>
+</td>
+<td style="border-bottom: solid black 1.0pt; border-left: none; border-right: none; border-top: solid black 1.0pt; height: 15.0pt; mso-border-bottom-themecolor: text1; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 90.8pt;" valign="top" nowrap="nowrap" width="121">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 64;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Cologne</span></div>
+</td>
+<td style="border-bottom: solid black 1.0pt; border-left: none; border-right: none; border-top: solid black 1.0pt; height: 15.0pt; mso-border-bottom-themecolor: text1; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 98.7pt;" valign="top" nowrap="nowrap" width="132">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 64;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Germany</span></div>
+</td>
+<td style="border-left: none; border: solid black 1.0pt; height: 15.0pt; mso-border-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 21.75pt;" valign="top" width="29"></td>
+</tr>
+<tr style="height: 15.0pt; mso-yfti-irow: 7;">
+<td style="border-left: solid black 1.0pt; border: none; height: 15.0pt; mso-border-left-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.3pt;" valign="top" nowrap="nowrap" width="66">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 4; text-align: right;" align="right"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-weight: bold; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">5</span></div>
+</td>
+<td style="border: none; height: 15.0pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 90.8pt;" valign="top" nowrap="nowrap" width="121">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Nagano</span></div>
+</td>
+<td style="border: none; height: 15.0pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 98.7pt;" valign="top" nowrap="nowrap" width="132">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Japan</span></div>
+</td>
+<td style="border-right: solid black 1.0pt; border: none; height: 15.0pt; mso-border-right-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 21.75pt;" valign="top" width="29"></td>
+</tr>
+<tr style="height: 15.0pt; mso-yfti-irow: 8;">
+<td style="border-right: none; border: solid black 1.0pt; height: 15.0pt; mso-border-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.3pt;" valign="top" nowrap="nowrap" width="66">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 68; text-align: right;" align="right"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-weight: bold; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">7</span></div>
+</td>
+<td style="border-bottom: solid black 1.0pt; border-left: none; border-right: none; border-top: solid black 1.0pt; height: 15.0pt; mso-border-bottom-themecolor: text1; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 90.8pt;" valign="top" nowrap="nowrap" width="121">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 64;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Manchester</span></div>
+</td>
+<td style="border-bottom: solid black 1.0pt; border-left: none; border-right: none; border-top: solid black 1.0pt; height: 15.0pt; mso-border-bottom-themecolor: text1; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 98.7pt;" valign="top" nowrap="nowrap" width="132">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 64;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">United Kingdom</span></div>
+</td>
+<td style="border-left: none; border: solid black 1.0pt; height: 15.0pt; mso-border-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 21.75pt;" valign="top" width="29"></td>
+</tr>
+<tr style="height: 15.0pt; mso-yfti-irow: 9;">
+<td style="border-left: solid black 1.0pt; border: none; height: 15.0pt; mso-border-left-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.3pt;" valign="top" nowrap="nowrap" width="66">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 4; text-align: right;" align="right"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-weight: bold; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">9</span></div>
+</td>
+<td style="border: none; height: 15.0pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 90.8pt;" valign="top" nowrap="nowrap" width="121">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">New York</span></div>
+</td>
+<td style="border: none; height: 15.0pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 98.7pt;" valign="top" nowrap="nowrap" width="132">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">U.S.A.</span></div>
+</td>
+<td style="border-right: solid black 1.0pt; border: none; height: 15.0pt; mso-border-right-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 21.75pt;" valign="top" width="29">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">CF</span></div>
+</td>
+</tr>
+<tr style="height: 15.0pt; mso-yfti-irow: 10;">
+<td style="border-right: none; border: solid black 1.0pt; height: 15.0pt; mso-border-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.3pt;" valign="top" nowrap="nowrap" width="66">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 68; text-align: right;" align="right"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-weight: bold; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">11</span></div>
+</td>
+<td style="border-bottom: solid black 1.0pt; border-left: none; border-right: none; border-top: solid black 1.0pt; height: 15.0pt; mso-border-bottom-themecolor: text1; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 90.8pt;" valign="top" nowrap="nowrap" width="121">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 64;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Kuala Lumpur</span></div>
+</td>
+<td style="border-bottom: solid black 1.0pt; border-left: none; border-right: none; border-top: solid black 1.0pt; height: 15.0pt; mso-border-bottom-themecolor: text1; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 98.7pt;" valign="top" nowrap="nowrap" width="132">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 64;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Malaysia</span></div>
+</td>
+<td style="border-left: none; border: solid black 1.0pt; height: 15.0pt; mso-border-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 21.75pt;" valign="top" width="29"></td>
+</tr>
+<tr style="height: 15.0pt; mso-yfti-irow: 11;">
+<td style="border-left: solid black 1.0pt; border: none; height: 15.0pt; mso-border-left-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.3pt;" valign="top" nowrap="nowrap" width="66">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 4; text-align: right;" align="right"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-weight: bold; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">12</span></div>
+</td>
+<td style="border: none; height: 15.0pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 90.8pt;" valign="top" nowrap="nowrap" width="121">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">London</span></div>
+</td>
+<td style="border: none; height: 15.0pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 98.7pt;" valign="top" nowrap="nowrap" width="132">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">United Kingdom</span></div>
+</td>
+<td style="border-right: solid black 1.0pt; border: none; height: 15.0pt; mso-border-right-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 21.75pt;" valign="top" width="29">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">CF</span></div>
+</td>
+</tr>
+<tr style="height: 15.0pt; mso-yfti-irow: 12;">
+<td style="border-right: none; border: solid black 1.0pt; height: 15.0pt; mso-border-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.3pt;" valign="top" nowrap="nowrap" width="66">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 68; text-align: right;" align="right"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-weight: bold; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">20</span></div>
+</td>
+<td style="border-bottom: solid black 1.0pt; border-left: none; border-right: none; border-top: solid black 1.0pt; height: 15.0pt; mso-border-bottom-themecolor: text1; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 90.8pt;" valign="top" nowrap="nowrap" width="121">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 64;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Padova</span></div>
+</td>
+<td style="border-bottom: solid black 1.0pt; border-left: none; border-right: none; border-top: solid black 1.0pt; height: 15.0pt; mso-border-bottom-themecolor: text1; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 98.7pt;" valign="top" nowrap="nowrap" width="132">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 64;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Italy</span></div>
+</td>
+<td style="border-left: none; border: solid black 1.0pt; height: 15.0pt; mso-border-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 21.75pt;" valign="top" width="29"></td>
+</tr>
+<tr style="height: 15.0pt; mso-yfti-irow: 13;">
+<td style="border-left: solid black 1.0pt; border: none; height: 15.0pt; mso-border-left-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.3pt;" valign="top" nowrap="nowrap" width="66">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 4; text-align: right;" align="right"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-weight: bold; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">27</span></div>
+</td>
+<td style="border: none; height: 15.0pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 90.8pt;" valign="top" nowrap="nowrap" width="121">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Dublin</span></div>
+</td>
+<td style="border: none; height: 15.0pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 98.7pt;" valign="top" nowrap="nowrap" width="132">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Ireland</span></div>
+</td>
+<td style="border-right: solid black 1.0pt; border: none; height: 15.0pt; mso-border-right-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 21.75pt;" valign="top" width="29">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">CF</span></div>
+</td>
+</tr>
+<tr style="height: 15.0pt; mso-yfti-irow: 14;">
+<td style="border-right: none; border: solid black 1.0pt; height: 15.0pt; mso-border-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.3pt;" valign="top" nowrap="nowrap" width="66">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 68; text-align: right;" align="right"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-weight: bold; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">36</span></div>
+</td>
+<td style="border-bottom: solid black 1.0pt; border-left: none; border-right: none; border-top: solid black 1.0pt; height: 15.0pt; mso-border-bottom-themecolor: text1; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 90.8pt;" valign="top" nowrap="nowrap" width="121">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 64;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Bangkok</span></div>
+</td>
+<td style="border-bottom: solid black 1.0pt; border-left: none; border-right: none; border-top: solid black 1.0pt; height: 15.0pt; mso-border-bottom-themecolor: text1; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 98.7pt;" valign="top" nowrap="nowrap" width="132">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 64;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Thailand</span></div>
+</td>
+<td style="border-left: none; border: solid black 1.0pt; height: 15.0pt; mso-border-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 21.75pt;" valign="top" width="29"></td>
+</tr>
+<tr style="height: 15.0pt; mso-yfti-irow: 15;">
+<td style="border-left: solid black 1.0pt; border: none; height: 15.0pt; mso-border-left-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.3pt;" valign="top" nowrap="nowrap" width="66">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 4; text-align: right;" align="right"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-weight: bold; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">59</span></div>
+</td>
+<td style="border: none; height: 15.0pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 90.8pt;" valign="top" nowrap="nowrap" width="121">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Mumbai</span></div>
+</td>
+<td style="border: none; height: 15.0pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 98.7pt;" valign="top" nowrap="nowrap" width="132">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">India</span></div>
+</td>
+<td style="border-right: solid black 1.0pt; border: none; height: 15.0pt; mso-border-right-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 21.75pt;" valign="top" width="29"></td>
+</tr>
+<tr style="height: 15.0pt; mso-yfti-irow: 16;">
+<td style="border-right: none; border: solid black 1.0pt; height: 15.0pt; mso-border-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.3pt;" valign="top" nowrap="nowrap" width="66">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 68; text-align: right;" align="right"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-weight: bold; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">75</span></div>
+</td>
+<td style="border-bottom: solid black 1.0pt; border-left: none; border-right: none; border-top: solid black 1.0pt; height: 15.0pt; mso-border-bottom-themecolor: text1; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 90.8pt;" valign="top" nowrap="nowrap" width="121">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 64;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Haifa</span></div>
+</td>
+<td style="border-bottom: solid black 1.0pt; border-left: none; border-right: none; border-top: solid black 1.0pt; height: 15.0pt; mso-border-bottom-themecolor: text1; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 98.7pt;" valign="top" nowrap="nowrap" width="132">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 64;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Israel</span></div>
+</td>
+<td style="border-left: none; border: solid black 1.0pt; height: 15.0pt; mso-border-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 21.75pt;" valign="top" width="29"></td>
+</tr>
+<tr style="height: 15.0pt; mso-yfti-irow: 17;">
+<td style="border-left: solid black 1.0pt; border: none; height: 15.0pt; mso-border-left-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.3pt;" valign="top" nowrap="nowrap" width="66">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 4; text-align: right;" align="right"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-weight: bold; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">154</span></div>
+</td>
+<td style="border: none; height: 15.0pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 90.8pt;" valign="top" nowrap="nowrap" width="121">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Sydney</span></div>
+</td>
+<td style="border: none; height: 15.0pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 98.7pt;" valign="top" nowrap="nowrap" width="132">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Australia</span></div>
+</td>
+<td style="border-right: solid black 1.0pt; border: none; height: 15.0pt; mso-border-right-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 21.75pt;" valign="top" width="29"></td>
+</tr>
+<tr style="height: 15.0pt; mso-yfti-irow: 18;">
+<td style="border-right: none; border: solid black 1.0pt; height: 15.0pt; mso-border-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.3pt;" valign="top" nowrap="nowrap" width="66">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 68; text-align: right;" align="right"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-weight: bold; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">176</span></div>
+</td>
+<td style="border-bottom: solid black 1.0pt; border-left: none; border-right: none; border-top: solid black 1.0pt; height: 15.0pt; mso-border-bottom-themecolor: text1; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 90.8pt;" valign="top" nowrap="nowrap" width="121">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 64;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Rio de Janeiro</span></div>
+</td>
+<td style="border-bottom: solid black 1.0pt; border-left: none; border-right: none; border-top: solid black 1.0pt; height: 15.0pt; mso-border-bottom-themecolor: text1; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 98.7pt;" valign="top" nowrap="nowrap" width="132">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 64;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Brazil</span></div>
+</td>
+<td style="border-left: none; border: solid black 1.0pt; height: 15.0pt; mso-border-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 21.75pt;" valign="top" width="29"></td>
+</tr>
+<tr style="height: 15.0pt; mso-yfti-irow: 19; mso-yfti-lastrow: yes;">
+<td style="border-bottom: solid black 1.0pt; border-left: solid black 1.0pt; border-right: none; border-top: none; height: 15.0pt; mso-border-bottom-themecolor: text1; mso-border-left-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.3pt;" valign="top" nowrap="nowrap" width="66">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm; mso-yfti-cnfc: 4; text-align: right;" align="right"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-weight: bold; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">244</span></div>
+</td>
+<td style="border-bottom: solid black 1.0pt; border: none; height: 15.0pt; mso-border-bottom-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 90.8pt;" valign="top" nowrap="nowrap" width="121">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">Cape Town</span></div>
+</td>
+<td style="border-bottom: solid black 1.0pt; border: none; height: 15.0pt; mso-border-bottom-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 98.7pt;" valign="top" nowrap="nowrap" width="132">
+<div class="MsoNormal" style="line-height: normal; margin-bottom: 0cm;"><span style="color: black; mso-ascii-font-family: Calibri; mso-bidi-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: NL; mso-hansi-font-family: Calibri;">South Africa</span></div>
+</td>
+<td style="border-bottom: solid black 1.0pt; border-left: none; border-right: solid black 1.0pt; border-top: none; height: 15.0pt; mso-border-bottom-themecolor: text1; mso-border-right-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 21.75pt;" valign="top" width="29"></td>
+</tr>
+</tbody>
+</table>
+<p><span class="Apple-style-span" style="font-size: medium;"> </span></p>
+</div>
+<div class="MsoNormal"><span class="Apple-style-span" style="font-size: medium;">As the table shows, the proximity of CloudFront is uneven around the world. </span></div>
+<div class="MsoNormal"><span class="Apple-style-span" style="font-size: medium;"><br />
+</span></div>
+<div class="MsoNormal"><span class="Apple-style-span" style="font-size: medium;">CloudFront changes its connectivity regularly, mostly for the better. An interesting data point for example is that on April 8, CloudFront created a presence near Hong Kong dropping the distance from 160 milliseconds to 4 milliseconds. The following graph gives more detail.</span></div>
+<div class="MsoNormal"><span class="Apple-style-span" style="font-size: medium;"><br />
+</span></div>
+<div class="separator" style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="http://1.bp.blogspot.com/_CtD78qRIIdU/TB52EdcXORI/AAAAAAAAAhE/mXe1XKwQ0mo/s1600/cf.png"><img src="https://1.bp.blogspot.com/_CtD78qRIIdU/TB52EdcXORI/AAAAAAAAAhE/mXe1XKwQ0mo/s640/cf.png" alt="" width="640" height="291" border="0" /></a></div>
+<div class="MsoNormal"><span class="Apple-style-span" style="font-size: medium;"><br />
+</span></div>
+<div class="MsoNormal"><span class="Apple-style-span" style="font-size: medium;">In line with our earlier research, this data too shows that maintaining good proximity in an ever changing Internet is not a trivial thing to do. See for example the ever changing proximities to New York and New Zealand.</span></div>
+<div class="MsoNormal"><span class="Apple-style-span" style="font-size: medium;"><br />
+</span></div>
+<div class="MsoNormal"><span class="Apple-style-span" style="font-size: medium;">Our research was done in collaboration with <a href="http://www.jitscale.com/">Jitscale </a>(a cloud consultancy) </span><span class="Apple-style-span" style="font-size: medium;"> and WatchMouse (a website monitoring company) </span><span class="Apple-style-span" style="font-size: medium;">. Distances are measured by measuring a TCP connect to an http URL of an object provided by Cloudfront, and does not include DNS lookup. </span></div>
+<div class="MsoNormal"><span class="Apple-style-span" style="font-size: medium;"><br />
+</span></div>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2010/06/amazon-cloudfront-movements/">Amazon CloudFront movements</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.clubcloudcomputing.com/2010/06/amazon-cloudfront-movements/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+	</channel>
+</rss>

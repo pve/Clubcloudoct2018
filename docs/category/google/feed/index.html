@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>google</title>
+	<atom:link href="https://www.clubcloudcomputing.com/category/google/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.clubcloudcomputing.com</link>
+	<description></description>
+	<lastBuildDate>Mon, 22 Oct 2018 15:15:59 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.8</generator>
+
+<image>
+	<url>https://www.clubcloudcomputing.com/wp-content/uploads/2017/02/cropped-favi-32x32.jpg</url>
+	<title>google</title>
+	<link>https://www.clubcloudcomputing.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>How good is Google Sites?</title>
+		<link>https://www.clubcloudcomputing.com/2012/07/how-good-is-google-sites/</link>
+		<comments>https://www.clubcloudcomputing.com/2012/07/how-good-is-google-sites/#respond</comments>
+		<pubDate>Thu, 19 Jul 2012 10:46:15 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[clouds]]></category>
+		<category><![CDATA[google]]></category>
+		<category><![CDATA[SaaS]]></category>
+
+		<guid isPermaLink="false">http://staging209.clubcloudcomputing.com/?p=698</guid>
+		<description><![CDATA[<p>How good is ‘Google Sites’ as a web hosting platform? For my contribution to the Computer Measurement Group’s (CMG) yearly conference (CMG Las Vegas 2012) I am reviewing a number of webhosting options. One of the basic options is ‘Google Sites’, which is a content management system (CMS) with hosting and a content distribution network, [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2012/07/how-good-is-google-sites/">How good is Google Sites?</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>How good is ‘Google Sites’ as a web hosting platform?</p>
+<p>For my contribution to the Computer Measurement Group’s (CMG) yearly conference (<a title="CMG las Vegas" href="http://www.cmg.org/conference/" target="_blank">CMG Las Vegas 2012</a>) I am reviewing a number of webhosting options. One of the basic options is ‘Google Sites’, which is a content management system (CMS) with hosting and a content distribution network, all rolled into one. You can have a reasonable website running in a few minutes, just add content. It is sort of an alternative to blog hosting on wordpress.com or posterous.com. And it is free.</p>
+<p>The obvious question then is: how good is it, and what kind of load will it sustain? First some basic results: one of my sites is hosted at Google Sites, and it failed 15 out of 8611 tests in June 2012, which is an uptime better than 99.8%. The average load time of the first request is under 900 milliseconds, though it differs a bit by location. The load time of the full page is a bit longer. This takes around 1.5 seconds to start rendering and 2.5 seconds to be fully loaded. See <a href="http://www.webpagetest.org/result/120706_VE_BTR/" target="_blank">http://www.webpagetest.org/result/120706_VE_BTR/</a> for a breakdown of the site download.</p>
+<p>A more interesting question is: how does it scale? Can it handle more load than a dedicated server?</p>
+<p>A regular dedicated server will run at more than 100 requests/second. If a web page visit results in 10 requests, this means such a server will deliver at least 10 pageviews per second, which sounds good enough for a typical blog. Most vanity bloggers will be happy to have 10 pageviews per hour :-).</p>
+<p>Here is what I did, step by step. I started by creating a page on a fresh domain at Google sites. With <a href=" http://jmeter.apache.org/index.html" target="_blank">Jmeter</a> I set up a little script to poll for that page. This script was then uploaded to <a href="http://cloudmonitor.nimsoft.com/" target="_blank">WatchMouse</a>, for continuous performance evaluation, and to <a href="http://blazemeter.com/" target="_blank">Blazemeter</a> for load testing. After an initial trial with a single server we fired 8 servers with 100 threads (simulated users) each.</p>
+<p>You can see the result in the next graph. You will see Google Sites easily handling over 150 requests per second, with a bandwidth of 3 Megabyte/second. Each request is a single HTTP request.</p>
+<p><a href="https://www.clubcloudcomputing.com/wp-content/uploads/2012/07/blazing.png"><img class="alignnone size-medium wp-image-700" title="blazing" src="https://www.clubcloudcomputing.com/wp-content/uploads/2012/07/blazing-300x134.png" alt="" width="300" height="134" srcset="https://www.clubcloudcomputing.com/wp-content/uploads/2012/07/blazing-300x134.png 300w, https://www.clubcloudcomputing.com/wp-content/uploads/2012/07/blazing-600x270.png 600w, https://www.clubcloudcomputing.com/wp-content/uploads/2012/07/blazing.png 974w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>Interestingly, Google Sites does some kind of rate limiting, as we can see in the next picture. As the number of simulated users increases, the response time increases as well, already at low volumes. There is no ‘load sensitivity point’ indicative of resource depletion.</p>
+<p><a href="https://www.clubcloudcomputing.com/wp-content/uploads/2012/07/blazing2.png"><img class="alignnone size-medium wp-image-701" title="blazing2" src="https://www.clubcloudcomputing.com/wp-content/uploads/2012/07/blazing2-300x117.png" alt="" width="300" height="117" srcset="https://www.clubcloudcomputing.com/wp-content/uploads/2012/07/blazing2-300x117.png 300w, https://www.clubcloudcomputing.com/wp-content/uploads/2012/07/blazing2-600x236.png 600w, https://www.clubcloudcomputing.com/wp-content/uploads/2012/07/blazing2.png 972w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>In the next picture you can see that the response rate just levels off.</p>
+<p><a href="https://www.clubcloudcomputing.com/wp-content/uploads/2012/07/blazing3.png"><img class="alignnone size-medium wp-image-702" title="blazing3" src="https://www.clubcloudcomputing.com/wp-content/uploads/2012/07/blazing3-300x116.png" alt="" width="300" height="116" srcset="https://www.clubcloudcomputing.com/wp-content/uploads/2012/07/blazing3-300x116.png 300w, https://www.clubcloudcomputing.com/wp-content/uploads/2012/07/blazing3-600x234.png 600w, https://www.clubcloudcomputing.com/wp-content/uploads/2012/07/blazing3.png 972w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>In fact, it is even likely that Google Sites is rate limiting by source IP address. While this test was ran, the independent monitoring by WatchMouse showed no correlated variation.</p>
+<p>Some final technical notes: If you want to maximize the requests/second you need lots of threads/simulated users with delays built-in. Jmeter is not good at simulating users that don’t have delays.</p>
+<p>By the way, the site under test was served by more than 40 different IP addresses. The site has low latency to places around the world: for example locations in Ireland, China, San Francisco, Malaysia all have connect times less than 5 milliseconds. This substantiates the statement that Google Sites is using some kind of CDN.</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2012/07/how-good-is-google-sites/">How good is Google Sites?</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.clubcloudcomputing.com/2012/07/how-good-is-google-sites/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Google&#8217;s spending spree: 2.4 million servers, and counting</title>
+		<link>https://www.clubcloudcomputing.com/2010/10/googles-spending-spree-2-4-million-servers-and-counting/</link>
+		<comments>https://www.clubcloudcomputing.com/2010/10/googles-spending-spree-2-4-million-servers-and-counting/#comments</comments>
+		<pubDate>Thu, 14 Oct 2010 21:11:00 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[google]]></category>
+
+		<guid isPermaLink="false">http://bitnami.clubcloudcomputing.com/2010/10/googles-spending-spree-2-4-million-servers-and-counting/</guid>
+		<description><![CDATA[<p>Google just published its Q3 financial results. You can read it yourself at&#160;http://investor.google.com/earnings/2010/Q3_google_earnings.html So, what is Google spending on IT, and how much servers would that buy? This is one of their best kept secrets. I looked at that earlier. Let&#8217;s have a new look. Some quotes: &#160;Other cost of revenues, which is comprised primarily [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2010/10/googles-spending-spree-2-4-million-servers-and-counting/">Google&#8217;s spending spree: 2.4 million servers, and counting</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Google just published its Q3 financial results. You can read it yourself at&nbsp;<a href="http://investor.google.com/earnings/2010/Q3_google_earnings.html">http://investor.google.com/earnings/2010/Q3_google_earnings.html</a></p>
+<p>So, what is Google spending on IT, and how much servers would that buy? This is one of their best kept secrets. I <a href="https://www.clubcloudcomputing.com/2005/09/network-the-cost-of-delivering-a-single-web-page/">looked at that earlier</a>. Let&#8217;s have a new look. Some quotes:</p>
+<blockquote><p><span class="Apple-style-span" style="font-family: arial, sans-serif; font-size: 13px;">&nbsp;Other cost of revenues, which is comprised primarily of data center operational expenses, amortization of intangible assets, content acquisition costs as well as credit card processing charges, increased to $747 million, or 10% of revenues, in the third quarter of 2010</span></p></blockquote>
+<p>and</p>
+<blockquote><p><span class="Apple-style-span" style="font-family: arial, sans-serif; font-size: 13px;">&nbsp;In the third quarter of 2010, capital expenditures were $757 million, the majority of which was related to IT infrastructure investments, including data centers, servers, and networking equipment.</span></p></blockquote>
+<p>&nbsp;So let us modestly assume that half the capital and half the operational expense is server related, $400 million each. Let us assume a cheap Google server costs&nbsp;$&nbsp;1000, and the associated network, datacenter facilities and such, another $ 1000. The run cost of the datacenter (power, cooling, etc) could match that. This leads to an investment pattern of 200.000 servers per quarter, 800.000 per year. With an average lifetime of 3 years, this puts the ballpark estimate of the size of Google&#8217;s server farm at 2.4 million servers.&nbsp;There are entire countries that do not have that many servers. There are entire countries that do not have that many PCs.</p>
+<p>Since 2004, the server farm increased in size by a factor of 16, while revenu increased 10 fold (see also my 2005 estimates). Once more, Google increases the amount of compute power that goes into a dollar of revenu, Moore&#8217;s law notwithstanding.</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2010/10/googles-spending-spree-2-4-million-servers-and-counting/">Google&#8217;s spending spree: 2.4 million servers, and counting</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.clubcloudcomputing.com/2010/10/googles-spending-spree-2-4-million-servers-and-counting/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>Engineering large digital infrastructures is not trivial</title>
+		<link>https://www.clubcloudcomputing.com/2009/09/engineering-large-digital-infrastructures-is-not-trivial/</link>
+		<comments>https://www.clubcloudcomputing.com/2009/09/engineering-large-digital-infrastructures-is-not-trivial/#comments</comments>
+		<pubDate>Wed, 02 Sep 2009 05:59:00 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[google]]></category>
+
+		<guid isPermaLink="false">http://bitnami.clubcloudcomputing.com/2009/09/engineering-large-digital-infrastructures-is-not-trivial/</guid>
+		<description><![CDATA[<p>Gmail was down a while. Google describes how it happened. In essence, a mechanism designed to throttle load on heavily used parts of the infrastructure reduced total capacity. If demand is then not reduced this leads to congestion, similar to what happens in a traffic jam. One way for gmail to reduce demand is to [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2009/09/engineering-large-digital-infrastructures-is-not-trivial/">Engineering large digital infrastructures is not trivial</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Gmail was down a while. <a href="http://gmailblog.blogspot.com/2009/09/more-on-todays-gmail-issue.html">Google describes how it happened.</a></p>
+<p>In essence, a mechanism designed to throttle load on heavily used parts of the infrastructure reduced total capacity. If demand is then not reduced this leads to congestion, similar to what happens in a traffic jam. </p>
+<p>One way for gmail to reduce demand is to signal to the webbrowser to decrease the frequency with which it polls the gmail servers for new mail (I do not know if they already do this).</p>
+<p>On a side note: can anyone think of a way to beta test systems of this size?</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2009/09/engineering-large-digital-infrastructures-is-not-trivial/">Engineering large digital infrastructures is not trivial</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.clubcloudcomputing.com/2009/09/engineering-large-digital-infrastructures-is-not-trivial/feed/</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+		<item>
+		<title>Which computing cloud is closer?</title>
+		<link>https://www.clubcloudcomputing.com/2008/12/which-computing-cloud-is-closer/</link>
+		<comments>https://www.clubcloudcomputing.com/2008/12/which-computing-cloud-is-closer/#respond</comments>
+		<pubDate>Wed, 24 Dec 2008 10:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[clouds]]></category>
+		<category><![CDATA[google]]></category>
+
+		<guid isPermaLink="false">http://bitnami.clubcloudcomputing.com/2008/12/which-computing-cloud-is-closer/</guid>
+		<description><![CDATA[<p>The ‘cloud’ stands for a worldwide infrastructure of computers that can deliver applications and content to any place on the Internet. Early examples of clouds are content distribution networks (CDN), which can serve web content from a worldwide distributed network of servers. Because the servers are closer to the user the user will see quicker [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2008/12/which-computing-cloud-is-closer/">Which computing cloud is closer?</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>The ‘cloud’ stands for a worldwide infrastructure of computers that can deliver applications and content to any place on the Internet. Early examples of clouds are content distribution networks (CDN), which can serve web content from a worldwide distributed network of servers. Because the servers are closer to the user the user will see quicker response. Because there are multiple servers, larger numbers of users can be served.</p>
+<p>I have done some measurements on the proximity of a number of content distribution networks to monitoring stations around the world. <a href="https://www.clubcloudcomputing.com/2008/11/watching-the-cloud/">Earlier</a> I reported on the distance that the Google Application Engine (GAE) has to the cloud.  Here we do the same for more content distribution networks. Note that GAE actually allows to run applications on the cloud, and we are using here only its capacity to serve content. </p>
+<p>The monitoring stations by Watchmouse are situated in 35 locations on all continents of the world. The minimum connect time to a provider as measured from a particular location is a good indicator of the distance to that provider.</p>
+<p>There are other qualities a good CDN should have. It should start serving content quickly, and it should serve it with adequate speed (bandwidth). I’ll report on those measurements later. </p>
+<p>Our Cloud Proximity Indicator is an aggregate measure, and is computing by averaging the distances to all monitoring stations.</p>
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid" style="border-bottom-style: none; border-collapse: collapse; border-color: initial; border-image: initial; border-left-style: none; border-right-style: none; border-top-style: none; border-width: initial; width: 376px;">
+<tbody>
+<tr style="height: 12.75pt; mso-yfti-firstrow: yes; mso-yfti-irow: 0;">
+<td nowrap="" style="border: solid windowtext 1.0pt; height: 12.75pt; mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 141.15pt;" valign="top" width="188">
+<div class="MsoNormal"><b><span lang="EN-US">Provider<o:p></o:p></span></b></div>
+</td>
+<td nowrap="" style="border-left: none; border: solid windowtext 1.0pt; height: 12.75pt; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 140.8pt;" valign="top" width="188">
+<div align="right" class="MsoNormal" style="text-align: right;"><b><span lang="EN-US">Cloud  Proximity (msec)<o:p></o:p></span></b></div>
+</td>
+</tr>
+<tr style="height: 12.75pt; mso-yfti-irow: 1;">
+<td nowrap="" style="border-top: none; border: solid windowtext 1.0pt; height: 12.75pt; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 141.15pt;" valign="top" width="188">
+<div class="MsoNormal"><span lang="EN-US">Akamai (MySpace)<o:p></o:p></span></div>
+</td>
+<td nowrap="" style="border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; height: 12.75pt; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 140.8pt;" valign="top" width="188">
+<div align="right" class="MsoNormal" style="text-align: right;"><span lang="EN-US">6<o:p></o:p></span></div>
+</td>
+</tr>
+<tr style="height: 12.75pt; mso-yfti-irow: 2;">
+<td nowrap="" style="border-top: none; border: solid windowtext 1.0pt; height: 12.75pt; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 141.15pt;" valign="top" width="188">
+<div class="MsoNormal"><span lang="EN-US">Amazon Cloudfront<o:p></o:p></span></div>
+</td>
+<td nowrap="" style="border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; height: 12.75pt; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 140.8pt;" valign="top" width="188">
+<div align="right" class="MsoNormal" style="text-align: right;"><span lang="EN-US">43<o:p></o:p></span></div>
+</td>
+</tr>
+<tr style="height: 12.75pt; mso-yfti-irow: 3;">
+<td nowrap="" style="border-top: none; border: solid windowtext 1.0pt; height: 12.75pt; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 141.15pt;" valign="top" width="188">
+<div class="MsoNormal"><span lang="EN-US">Mosso<o:p></o:p></span></div>
+</td>
+<td nowrap="" style="border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; height: 12.75pt; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 140.8pt;" valign="top" width="188">
+<div align="right" class="MsoNormal" style="text-align: right;"><span lang="EN-US">49<o:p></o:p></span></div>
+</td>
+</tr>
+<tr style="height: 12.75pt; mso-yfti-irow: 4;">
+<td nowrap="" style="border-top: none; border: solid windowtext 1.0pt; height: 12.75pt; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 141.15pt;" valign="top" width="188">
+<div class="MsoNormal"><span lang="EN-US">GAE<o:p></o:p></span></div>
+</td>
+<td nowrap="" style="border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; height: 12.75pt; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 140.8pt;" valign="top" width="188">
+<div align="right" class="MsoNormal" style="text-align: right;"><span lang="EN-US">61<o:p></o:p></span></div>
+</td>
+</tr>
+<tr style="height: 12.75pt; mso-yfti-irow: 5;">
+<td nowrap="" style="border-top: none; border: solid windowtext 1.0pt; height: 12.75pt; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 141.15pt;" valign="top" width="188">
+<div class="MsoNormal"><span lang="EN-US">CNN.com<o:p></o:p></span></div>
+</td>
+<td nowrap="" style="border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; height: 12.75pt; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 140.8pt;" valign="top" width="188">
+<div align="right" class="MsoNormal" style="text-align: right;"><span lang="EN-US">66<o:p></o:p></span></div>
+</td>
+</tr>
+<tr style="height: 12.75pt; mso-yfti-irow: 6;">
+<td nowrap="" style="border-top: none; border: solid windowtext 1.0pt; height: 12.75pt; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 141.15pt;" valign="top" width="188">
+<div class="MsoNormal"><span lang="EN-US">SimpleCDN<o:p></o:p></span></div>
+</td>
+<td nowrap="" style="border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; height: 12.75pt; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 140.8pt;" valign="top" width="188">
+<div align="right" class="MsoNormal" style="text-align: right;"><span lang="EN-US">94<o:p></o:p></span></div>
+</td>
+</tr>
+<tr style="height: 12.75pt; mso-yfti-irow: 7; mso-yfti-lastrow: yes;">
+<td nowrap="" style="border-top: none; border: solid windowtext 1.0pt; height: 12.75pt; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 141.15pt;" valign="top" width="188">
+<div class="MsoNormal"><span lang="EN-US">Single host <st1:place w:st="on"><st1:state w:st="on">New York</st1:state></st1:place><o:p></o:p></span></div>
+</td>
+<td nowrap="" style="border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; height: 12.75pt; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 140.8pt;" valign="top" width="188">
+<div align="right" class="MsoNormal" style="text-align: right;"><span lang="EN-US">127<o:p></o:p></span></div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Remarks and observations<br />• The round trip delay between Spain and New-Zealand (opposite on the globe) is around 290 milliseconds <br />• Akamai is really everywhere<br />• Google Applications Eengine, although fundamentally more powerful and still in beta, is pretty impressive. It is in the same league as most other CDNs.</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2008/12/which-computing-cloud-is-closer/">Which computing cloud is closer?</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.clubcloudcomputing.com/2008/12/which-computing-cloud-is-closer/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Watching the cloud</title>
+		<link>https://www.clubcloudcomputing.com/2008/11/watching-the-cloud/</link>
+		<comments>https://www.clubcloudcomputing.com/2008/11/watching-the-cloud/#respond</comments>
+		<pubDate>Sat, 22 Nov 2008 14:21:00 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[clouds]]></category>
+		<category><![CDATA[google]]></category>
+
+		<guid isPermaLink="false">http://bitnami.clubcloudcomputing.com/2008/11/watching-the-cloud/</guid>
+		<description><![CDATA[<p>Google App Engine is an infrastructure to deliver applications through Google’s cloud. You can drop applications written in Python in it, and let Google do the hosting. I am setting up a business based on this (GriddleJuiz). So the first obvious questions are: where is the cloud, and does it perform? With the help of [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2008/11/watching-the-cloud/">Watching the cloud</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Google App Engine is an infrastructure to deliver applications through Google’s cloud. You can drop applications written in Python in it, and let Google do the hosting. I am setting up a business based on this (<a href="http://www.griddlejuiz.com/">GriddleJuiz</a>).</p>
+<p>So the first obvious questions are: where is the cloud, and does it perform? With the help of my friends from Watchmouse I ran a test on one of my Google App Engine sites and compared it with a regularly hosted website. In the chart you can see some of the results: the time it takes to connect to the site from various places in the world.</p>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/_CtD78qRIIdU/TBedP5SW0FI/AAAAAAAAAg8/AIPf43HRLUE/s1600/Where-is-the-cloud-717106.png" imageanchor="1" style="clear: right; float: right; margin-bottom: 1em; margin-left: 1em;"><img border="0" src="https://3.bp.blogspot.com/_CtD78qRIIdU/TBedP5SW0FI/AAAAAAAAAg8/AIPf43HRLUE/s320/Where-is-the-cloud-717106.png" /></a></div>
+<p>The interesting observations are:</p>
+<ol>
+<li>Time to connect to the regular site increase with distance. We are measuring the speed of light here, sort of.</li>
+<li>The Google cloud is in more than one place. For example, it is close to the Netherlands, but it also has a presence in East Asia, near Hong Kong. </li>
+<li>The cloud is probably also close to North America, but it puzzles me why it is not nearer. </li>
+<li>The regular site is closer to monitoring station NL2, where the cloud is closer to NL4. </li>
+<li>Google does not guess correctly the location of some WM monitoring stations. E.g. DK (Danmark) is way off, and might as well be in North America. This is a common misconception among Americans 🙂 </li>
+</ol>
+<p>These results are pretty reproducible by the way. We have done measurements over several 24 hour cycles. The next interesting thing of course is raw performance: how many hits/second can it pull? Stay tuned for more results.</p>
+<p>Google has solved the hard part of scalable application infrastructure: duplication over a large distance. If you can do that, you can deploy any number of servers. Yet, there appears to be a lot of work left, the cloud does not always guess correctly where the user is.</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2008/11/watching-the-cloud/">Watching the cloud</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.clubcloudcomputing.com/2008/11/watching-the-cloud/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Chrome: Google owns the web</title>
+		<link>https://www.clubcloudcomputing.com/2008/09/chrome-google-owns-the-web/</link>
+		<comments>https://www.clubcloudcomputing.com/2008/09/chrome-google-owns-the-web/#respond</comments>
+		<pubDate>Mon, 08 Sep 2008 07:13:00 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[google]]></category>
+
+		<guid isPermaLink="false">http://bitnami.clubcloudcomputing.com/2008/09/chrome-google-owns-the-web/</guid>
+		<description><![CDATA[<p>In my previous post I discussed the technical qualities of Google&#8217;s new browser, Chrome. On a strategic business level, Chrome is the kick-off for a new battle for platform dominance. How can substituting one piece of free software (the browser) for another have such business impact? To understand that, you will have to look at [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2008/09/chrome-google-owns-the-web/">Chrome: Google owns the web</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>In <a href="https://www.clubcloudcomputing.com/2008/09/google-chrome-here-is-web-2-1/">my previous post</a> I discussed the technical qualities of Google&#8217;s new browser, Chrome. On a strategic business level, Chrome is the kick-off for a new battle for platform dominance. </p>
+<p>How can substituting one piece of free software (the browser) for another have such business impact? To understand that, you will have to look at the business model of Microsoft, and how it is affected by the changing ecosystem. </p>
+<p>Microsoft makes its money not from the browser (it is free), a little from the operating system on the desktop, and quite substantially from its Office suite of applications and back-end server and database products. The online services of Microsoft are clearly behind in the market. </p>
+<p>The Achilles heel of this model is Office. It is essential, because it locks in users. Yet, a stable Web 2.1 (see previous post) enables other parties to produce online software on a much larger scale than is currently possible. Google is already doing this with <a href="http://docs.google.com/">Google docs</a>, but between the lines of the design documentation of Chrome, you can read that they have reached the limits of current browsers. </p>
+<p>Chrome will change that, and allow for superior online alternatives to Office. That also reduces the need for running Microsoft Windows on the desktop. One of the big reasons for running a Microsoft based IT architecture is its integration: the pieces fit together, more or less. But when essential pieces drop out, the other pieces will be under discussion as well. On the server side in particular, there are a lot of viable open source alternatives. </p>
+<p>So Microsoft is in trouble, because Chrome has repossessed the Web. By the way, the other major collateral damage will be Firefox and other open source browsers.</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2008/09/chrome-google-owns-the-web/">Chrome: Google owns the web</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.clubcloudcomputing.com/2008/09/chrome-google-owns-the-web/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Google Chrome: here is Web 2.1</title>
+		<link>https://www.clubcloudcomputing.com/2008/09/google-chrome-here-is-web-2-1/</link>
+		<comments>https://www.clubcloudcomputing.com/2008/09/google-chrome-here-is-web-2-1/#respond</comments>
+		<pubDate>Mon, 08 Sep 2008 06:56:00 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[google]]></category>
+
+		<guid isPermaLink="false">http://bitnami.clubcloudcomputing.com/2008/09/google-chrome-here-is-web-2-1/</guid>
+		<description><![CDATA[<p>Google&#8217;s new browser, Chrome, appears to be a major improvement not so much for its functionality but for its stability. In software land, version 2 of something indicates the first serious incorporation of user feedback. In this way, Web 2.0 addressed user needs for more interactivity and multi-user, multi-site collaboration. In software land, version 2.0 [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2008/09/google-chrome-here-is-web-2-1/">Google Chrome: here is Web 2.1</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Google&#8217;s new browser, Chrome, appears to be a major improvement not so much for its functionality but for its stability.</p>
+<p>In software land, version 2 of something indicates the first serious incorporation of user feedback. In this way, Web 2.0 addressed user needs for more interactivity and multi-user, multi-site collaboration. </p>
+<p>In software land, version 2.0 brings the new functionality, but you will have to wait for version 2.1 if you want stability. From my software years I know that this is an arduous task, and often involves major structural rethinking, even when that is hardly visible from the outside.</p>
+<p>Looking through the <a href="http://www.google.com/googlebooks/chrome/">design story of Chrome</a>, it is clear that this is a major redesign that takes into account how the web is actually used today. </p>
+<p>Of course, there is no traditional self contained packaged software labeled Web 2.1.  Making web applications work involves an entire ecosystem of software components, of which the browser is only one. Nevetheless, Chrome enables other agents in the ecosystem to assume a more dependable browser. I&#8217;ll discuss the strategic business implications of that in my next post.</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2008/09/google-chrome-here-is-web-2-1/">Google Chrome: here is Web 2.1</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.clubcloudcomputing.com/2008/09/google-chrome-here-is-web-2-1/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Hardware can fail, you know. Things can break.</title>
+		<link>https://www.clubcloudcomputing.com/2008/07/hardware-can-fail-you-know-things-can-break/</link>
+		<comments>https://www.clubcloudcomputing.com/2008/07/hardware-can-fail-you-know-things-can-break/#respond</comments>
+		<pubDate>Wed, 02 Jul 2008 14:02:00 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[google]]></category>
+
+		<guid isPermaLink="false">http://bitnami.clubcloudcomputing.com/2008/07/hardware-can-fail-you-know-things-can-break/</guid>
+		<description><![CDATA[<p>Computers are terribly reliable, in general. Today&#8217;s computers execute millions of instructions each second, with an error rate that is inconceivable in other technologies. Yet, if you have hundreds of thousands of machines, you do need to take care of failures. A Cnet article elaborates on the Google situation (a Google cluster has several thousands [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2008/07/hardware-can-fail-you-know-things-can-break/">Hardware can fail, you know. Things can break.</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Computers are terribly reliable, in general. Today&#8217;s computers execute millions of instructions each second, with an error rate that is inconceivable in other technologies. Yet, if you have hundreds of thousands of machines, you do need to take care of failures. </p>
+<p>A <a href="http://news.cnet.com/8301-10784_3-9955184-7.html">Cnet article</a> elaborates on the Google situation (a Google cluster has several thousands of machines):</p>
+<blockquote><p>In each cluster&#8217;s first year, it&#8217;s typical that 1,000 individual machine failures will occur; thousands of hard drive failures will occur; one power distribution unit will fail, bringing down 500 to 1,000 machines for about 6 hours; 20 racks will fail, each time causing 40 to 80 machines to vanish from the network; 5 racks will &#8220;go wonky,&#8221; with half their network packets missing in action; and the cluster will have to be rewired once, affecting 5 percent of the machines at any given moment over a 2-day span, Dean said. And there&#8217;s about a 50 percent chance that the cluster will overheat, taking down most of the servers in less than 5 minutes and taking 1 to 2 days to recover. </p></blockquote>
+<p>These look like interesting planning assumptions for both hardware and software planners. As they say:</p>
+<blockquote><p>&#8220;Our view is it&#8217;s better to have twice as much hardware that&#8217;s not as reliable than half as much that&#8217;s more reliable,&#8221; Dean said. &#8220;You have to provide reliability on a software level. If you&#8217;re running 10,000 machines, something is going to die every day.&#8221; </p></blockquote>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2008/07/hardware-can-fail-you-know-things-can-break/">Hardware can fail, you know. Things can break.</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.clubcloudcomputing.com/2008/07/hardware-can-fail-you-know-things-can-break/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>How one second delay can kill your online business</title>
+		<link>https://www.clubcloudcomputing.com/2007/03/how-one-second-delay-can-kill-your-online-business/</link>
+		<comments>https://www.clubcloudcomputing.com/2007/03/how-one-second-delay-can-kill-your-online-business/#respond</comments>
+		<pubDate>Thu, 29 Mar 2007 14:48:00 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[google]]></category>
+
+		<guid isPermaLink="false">http://bitnami.clubcloudcomputing.com/2007/03/how-one-second-delay-can-kill-your-online-business/</guid>
+		<description><![CDATA[<p>Just one second delay in delivering a web page can make a devastating impact on your online business. Consider this: an item on an online auction site is easily viewed 300 times. This means that a user in search of particular item could therefore view 300 items before making a choice. If each of these [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2007/03/how-one-second-delay-can-kill-your-online-business/">How one second delay can kill your online business</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Just one second delay in delivering a <span class="blsp-spelling-error" id="SPELLING_ERROR_0"><span class="blsp-spelling-corrected" id="SPELLING_ERROR_0">web page</span></span> can make a devastating impact on your online business.</p>
+<p>Consider this: an item on an online auction site is easily viewed 300 times.</p>
+<p>This means that a user in search of particular item could therefore view 300 items before making a choice.</p>
+<p>If each of these views incurs an additional 1 second of delay, this will add 5 minutes to the total search. That is 5 whole minutes wasted. If you can choose between two shops where one lets you wait idling for 5 more minutes, which one do you choose?</p>
+<p>Maybe this is why Google strives to perform really well, and in fact delivers its home page in 0.2 seconds on the average.</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2007/03/how-one-second-delay-can-kill-your-online-business/">How one second delay can kill your online business</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.clubcloudcomputing.com/2007/03/how-one-second-delay-can-kill-your-online-business/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>[network] The cost of delivering a single web page</title>
+		<link>https://www.clubcloudcomputing.com/2005/09/network-the-cost-of-delivering-a-single-web-page/</link>
+		<comments>https://www.clubcloudcomputing.com/2005/09/network-the-cost-of-delivering-a-single-web-page/#comments</comments>
+		<pubDate>Fri, 02 Sep 2005 12:19:00 +0000</pubDate>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+				<category><![CDATA[google]]></category>
+
+		<guid isPermaLink="false">http://bitnami.clubcloudcomputing.com/2005/09/network-the-cost-of-delivering-a-single-web-page/</guid>
+		<description><![CDATA[<p>The other day I wrote about Google’s technology cost, leading to an estimate of 0.5 dollarcents per delivered search result. There appeared to be a real contrast with the numbers Jim Gray was coming up with from his experience with the Terraserver. I interviewed him to dive deeper into these numbers and their composition. According [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2005/09/network-the-cost-of-delivering-a-single-web-page/">[network] The cost of delivering a single web page</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>The other day I wrote about Google’s technology cost, leading to an estimate of 0.5 dollarcents per delivered search result. There appeared to be a real contrast with the numbers <a href="http://research.microsoft.com/~Gray/">Jim Gray</a> was coming up with from his experience with the Terraserver. I interviewed him to dive deeper into these numbers and their composition. According to Jim, in October 2004 Terraserver was able to serve up to 3 million web pages per day (about 35 per second), each containing quite a bit of graphics. The total operating cost (excluding application development) was $ 387.000 per year.</p>
+<p>A Terraserver webpage thus cost 350 microdollars (about 4 hundredths of a cent) to deliver. This is an order of magnitude less than Google’s, and we are not finished. According to Jim Gray, if he would scale up the Terraserver capacity by a factor of 100, getting it in the ballpark of Google, that cost would be even less. In the following table I have summarised the scale factors.</p>
+<p><img class="size-medium wp-image-373 aligncenter" title="webpagetable" src="https://www.clubcloudcomputing.com/wp-content/uploads/2012/03/webpagetable-300x216.gif" alt="" width="300" height="216" /></p>
+<p>Most services and capital expenditure scale linear with the number of delivered pages, but the management of the hosting and the application do not need to be scaled up. The bottom line is a page cost that dives to 64 microdollars.</p>
+<p>As a comparison, a friend of mine runs a simple database driven website on a shared hosting account. The yearly hosting cost is around $ 374, and it serves about 600.000 pages per month, resulting in a page cost of 51 microdollars.</p>
+<p>What can explain the difference of a factor of 100 between these page costs, and Google’s? One hypothesis is that, in addition to serving up pages, Google spiders the web. However Terraserver also brings in Terabytes of geographical data every year. So, either Google spends a lot more machine cycles on search results than Terraserver, or most Google hardware is not dedicated to search. Tune in next week, and maybe I’ll have some more data.</p>
+<p>The post <a rel="nofollow" href="https://www.clubcloudcomputing.com/2005/09/network-the-cost-of-delivering-a-single-web-page/">[network] The cost of delivering a single web page</a> appeared first on <a rel="nofollow" href="https://www.clubcloudcomputing.com"></a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.clubcloudcomputing.com/2005/09/network-the-cost-of-delivering-a-single-web-page/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+	</channel>
+</rss>
